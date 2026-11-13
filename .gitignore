@@ -1,0 +1,6 @@
+.env
+.env.*
+trader/state/
+trader/cache/
+trader/engine/
+__pycache__/

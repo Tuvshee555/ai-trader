@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "alpaca": {
+      "command": "uvx",
+      "args": ["--env-file", "C:/Dev/ai-trader/.env.local", "alpaca-mcp-server"],
+      "env": {
+        "ALPACA_PAPER_TRADE": "true",
+        "ALPACA_TOOLSETS": "account,trading,stock-data"
+      }
+    }
+  }
+}
