@@ -32,8 +32,8 @@ def main():
     import books
     doc = books._read(books.BOOKS, {"books": {}})
     syms = sorted({s_ for b in doc["books"].values() for s_ in b["shares"]} | {books.BENCH})
-    engine = {"value": book, "start_value": start["budget"], "spy_start": start["spy_prev_close"],
-              "start_session": start["session"]}
+    engine = {"value": book, "start_value": start["budget"],
+              "spy_start": doc.get("engine_spy_open") or start["spy_prev_close"], "start_session": start["session"]}
     print("\nTournament (best vs SPY first):")
     books.show(books.table(doc["books"], latest_prices(syms), engine))
     picks = books._read(os.path.join(STATE_DIR, "ai_picks.json"), None)

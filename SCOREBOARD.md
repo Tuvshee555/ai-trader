@@ -1,12 +1,12 @@
 # Tournament scoreboard
 
-Paper money, $40,000 per player. Updated after the 2026-11-13 session (2026-11-14 06:53 UTC).
+Paper money, $40,000 per player. Updated after the 2026-11-13 session (2026-11-14 07:29 UTC).
 
 Verdict on **2026-12-14**. Until then the leader can still change.
 
 | # | Player | Since | Value | Return | SPY same dates | vs SPY |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Engine (4 signals vote) | 2026-11-13 | $40,060 | +0.15% | -0.66% | **+0.81** |
+| 1 | Engine (4 signals vote) | 2026-11-13 | $40,060 | +0.15% | -1.05% | **+1.20** |
 | 2 | All 100 equally (fair bar) | 2026-11-13 | $39,862 | -0.35% | -1.05% | **+0.70** |
 | 3 | Copy Berkshire 13F | 2026-11-13 | $39,824 | -0.44% | -1.05% | **+0.61** |
 | 4 | Momentum only | 2026-11-13 | $39,786 | -0.53% | -1.05% | **+0.52** |
@@ -33,3 +33,5 @@ The AI-capex complex is unwinding hard (NVDA -27% over 3m and -13% last week, ch
 | cash | 12% | |
 
 One month is mostly luck: a lead of a point or two proves nothing. See README.md for how it works.
+
+Crypto: the meme-coin day trader has its own page, [CRYPTO.md](CRYPTO.md), checked every hour.

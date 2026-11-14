@@ -51,9 +51,11 @@ def tournament(session, bars, dry, engine):
     try:
         import books
         books.step(session, bars, dry=dry, engine=engine)
+        return True
     except Exception as e:   # noqa: BLE001
         print("  tournament step failed: %s" % e)
         log("tournament_error", session=session, error=str(e)[:300])
+        return False
 
 
 def main():
@@ -86,7 +88,8 @@ def main():
         print("Already ran for the %s session." % session)
         books_doc = read(os.path.join(STATE_DIR, "books.json"), {})
         if state.get("start") and books_doc.get("last_session") != session:   # retry a failed tournament step
-            tournament(session, load_bars(UNIVERSE + [BENCH]), False, engine_score(state, acct))
+            if not tournament(session, load_bars(UNIVERSE + [BENCH]), False, engine_score(state, acct)):
+                sys.exit("The tournament step failed again (the engine itself is fine). See trader/engine/log.jsonl.")
         return
 
     bars = load_bars(UNIVERSE + [BENCH])
@@ -177,7 +180,9 @@ def main():
         os.makedirs(STATE_DIR, exist_ok=True)
         json.dump(state, open(STATE, "w", encoding="utf-8"), indent=1)
         print("Score: book $%s vs same money in SPY $%s" % (format(book, ",.2f"), format(bench, ",.2f")))
-    tournament(session, bars, a.dry, engine_score(state, acct))
+    if not tournament(session, bars, a.dry, engine_score(state, acct)):
+        # The engine's orders and state are saved; fail the job so GitHub emails about it.
+        sys.exit("The tournament step failed (the engine itself is fine). See trader/engine/log.jsonl.")
 
 
 def engine_score(state, acct):

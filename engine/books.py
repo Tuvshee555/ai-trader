@@ -132,6 +132,8 @@ def backfill(doc, bars, engine_start):
     dates, _o, closes = align(bars, BENCH, before=engine_start)
     i = len(dates) - 1
     opens = {s: opens_all[s][k] for s in opens_all if opens_all[s][k]}
+    # The engine bought at that open too, so its SPY yardstick starts there like everyone else's.
+    doc.setdefault("engine_spy_open", opens.get(BENCH))
     for name, p in PLAYERS.items():
         if not p["backfill"] or name in doc["books"]:
             continue
@@ -190,6 +192,8 @@ def step(session, bars, dry=False, engine=None, allow_ai=True):
 
     if dry:
         return
+    if engine and doc.get("engine_spy_open"):
+        engine = dict(engine, spy_start=doc["engine_spy_open"])
     rows = table(books, px, engine)
     new = not os.path.exists(TOURNAMENT)
     with open(TOURNAMENT, "a", encoding="utf-8") as fh:
