@@ -16,7 +16,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import DATA, PAPER, ROOT, STATE_DIR, align, call, load_bars  # noqa: E402
+from common import PAPER, ROOT, STATE_DIR, align, call, latest_prices, load_bars  # noqa: E402
 from strategy import BENCH, PARAMS, UNIVERSE, targets  # noqa: E402
 
 STATE = os.path.join(STATE_DIR, "state.json")
@@ -46,15 +46,14 @@ def risk_checker():
     return mod.check
 
 
-def latest_prices(symbols, fallback):
-    out = dict(fallback)
-    for k in range(0, len(symbols), 50):
-        s, b = call("GET", DATA + "/v2/stocks/trades/latest?feed=iex&symbols=" + ",".join(symbols[k:k + 50]))
-        if s == 200:
-            for sym, t in (b.get("trades") or {}).items():
-                if t.get("p"):
-                    out[sym] = float(t["p"])
-    return out
+def tournament(session, bars, dry, engine):
+    """The other players. A failure here never stops the engine."""
+    try:
+        import books
+        books.step(session, bars, dry=dry, engine=engine)
+    except Exception as e:   # noqa: BLE001
+        print("  tournament step failed: %s" % e)
+        log("tournament_error", session=session, error=str(e)[:300])
 
 
 def main():
@@ -85,6 +84,8 @@ def main():
     state = read(STATE, {})
     if state.get("last_session") == session and not (a.force or a.dry):
         print("Already ran for the %s session." % session)
+        if state.get("start"):   # the tournament retries on its own if it failed last time
+            tournament(session, load_bars(UNIVERSE + [BENCH]), False, engine_score(state, acct))
         return
 
     bars = load_bars(UNIVERSE + [BENCH])
@@ -175,6 +176,13 @@ def main():
         os.makedirs(STATE_DIR, exist_ok=True)
         json.dump(state, open(STATE, "w", encoding="utf-8"), indent=1)
         print("Score: book $%s vs same money in SPY $%s" % (format(book, ",.2f"), format(bench, ",.2f")))
+    tournament(session, bars, a.dry, engine_score(state, acct))
+
+
+def engine_score(state, acct):
+    st = state["start"]
+    return {"value": st["budget"] + float(acct["equity"]) - st["account_equity"], "start_value": st["budget"],
+            "spy_start": st["spy_prev_close"], "start_session": st["session"]}
 
 
 if __name__ == "__main__":

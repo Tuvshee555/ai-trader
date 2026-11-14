@@ -19,10 +19,27 @@ An experiment: can a rules-based engine beat simply holding the S&P 500? It trad
 
 The book is $40,000 of the paper account (`trader/config.json`).
 
+## The tournament
+
+The engine competes with other players, each with its own $40,000, on one scoreboard:
+
+| Player | What it does | Trades |
+| --- | --- | --- |
+| Engine | the four signals vote (above) | weekly, real paper orders |
+| Momentum only | the backtest's best single signal | weekly |
+| Copy Berkshire 13F | Berkshire Hathaway's top 5 (`trader/targets.json`) | when a new filing replaces the file |
+| AI judgement | Claude reads prices and headlines and picks 5 to 15 stocks (`engine/ai_pick.py`) | weekly |
+| All 100 equally | the fair bar | monthly |
+
+Every book is compared with SPY over its own dates. Only the engine sends orders to Alpaca. The others are shadow books in `trader/engine/books.json`, filled at the price when the daily run happens with the same 0.10% cost. The mechanical players started at the engine's first session, filled at that day's open. The AI player started at its first pick. After about three months the losers are dropped and the winner gets the money.
+
+The AI player runs the Claude Code CLI on the Claude subscription with every tool switched off, once a week. It costs no API money. Its answer is checked before use (known symbols, at most 15% each, 5 to 15 stocks), and every prompt and answer is kept in `trader/engine/ai/`.
+
 ## Commands
 
 ```
-python engine/score.py          # the scoreboard: engine vs the same money in SPY
+python engine/score.py          # the scoreboard: every player vs the same money in SPY
+python engine/ai_pick.py        # make the AI player's picks for the next session now
 python engine/run.py --dry      # what it would do right now, places nothing
 python engine/run.py --force    # rebalance now
 python engine/backtest.py       # replay the strategy over 2017 to today

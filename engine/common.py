@@ -58,6 +58,27 @@ def call(method, url, body=None, tries=3):
             return 0, str(e)
 
 
+def latest_prices(symbols, fallback=None):
+    """Last trade prices (IEX, free and live), falling back to the given prices."""
+    out = dict(fallback or {})
+    for k in range(0, len(symbols), 50):
+        s, b = call("GET", DATA + "/v2/stocks/trades/latest?feed=iex&symbols=" + ",".join(symbols[k:k + 50]))
+        if s == 200:
+            for sym, t in (b.get("trades") or {}).items():
+                if t.get("p"):
+                    out[sym] = float(t["p"])
+    return out
+
+
+def clock():
+    """(session date, market open now?) from Alpaca's clock. The session is today's if
+    the market is open, otherwise the next one."""
+    s, c = call("GET", PAPER + "/v2/clock")
+    if s != 200:
+        raise RuntimeError("Alpaca clock call failed (%s): %s" % (s, c))
+    return (c["timestamp"][:10] if c["is_open"] else c["next_open"][:10]), c
+
+
 def fetch_bars(symbols, start="2016-01-01"):
     """Daily bars, split and dividend adjusted. {symbol: [[date, open, close], ...]}"""
     # The free plan only serves consolidated-tape data that is at least 15 minutes old.
