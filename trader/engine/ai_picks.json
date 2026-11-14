@@ -1,0 +1,89 @@
+{
+ "session": "2026-11-16",
+ "signal_date": "2026-11-13",
+ "model": "opus",
+ "weights": {
+  "ABBV": 0.09,
+  "GILD": 0.08,
+  "MRK": 0.08,
+  "LLY": 0.08,
+  "XOM": 0.08,
+  "COP": 0.06,
+  "V": 0.07,
+  "PG": 0.07,
+  "MET": 0.06,
+  "UNP": 0.06,
+  "MDLZ": 0.05,
+  "FDX": 0.05,
+  "MSFT": 0.05
+ },
+ "picks": [
+  {
+   "symbol": "ABBV",
+   "weight": 0.09,
+   "reason": "Strong cash flow, +19% over 3m with only 20 vol - leadership without AI beta."
+  },
+  {
+   "symbol": "GILD",
+   "weight": 0.08,
+   "reason": "Best risk-adjusted pharma trend here: +22% 3m, +31 12-1m momentum, 27 vol."
+  },
+  {
+   "symbol": "MRK",
+   "weight": 0.08,
+   "reason": "+63% 12-1m momentum on a still-cheap pharma multiple, quietly reclaiming its uptrend."
+  },
+  {
+   "symbol": "LLY",
+   "weight": 0.08,
+   "reason": "Dominant obesity franchise with accelerating 1m and 3m price trend; sized for its 30 vol."
+  },
+  {
+   "symbol": "XOM",
+   "weight": 0.08,
+   "reason": "+52% 12-1m momentum, Guyana Longtail approval, cheap and uncorrelated to the chip unwind."
+  },
+  {
+   "symbol": "COP",
+   "weight": 0.06,
+   "reason": "+64% 12-1m momentum and tight LNG/crude backdrop heading into a cold European winter."
+  },
+  {
+   "symbol": "V",
+   "weight": 0.07,
+   "reason": "High-quality toll road on consumer spend, +19% 3m at 22 vol, no AI capex exposure."
+  },
+  {
+   "symbol": "PG",
+   "weight": 0.07,
+   "reason": "Defensive compounder breaking out (+19% 3m) - what buyers rotate into when risk comes off."
+  },
+  {
+   "symbol": "MET",
+   "weight": 0.06,
+   "reason": "Insurer that earns more with yields higher for longer; +28 12-1m, low vol, cheap."
+  },
+  {
+   "symbol": "UNP",
+   "weight": 0.06,
+   "reason": "Rail volumes improving with +32 12-1m momentum at just 21 vol."
+  },
+  {
+   "symbol": "MDLZ",
+   "weight": 0.05,
+   "reason": "Snacking staple with cocoa costs easing, steady uptrend above its 200-day."
+  },
+  {
+   "symbol": "FDX",
+   "weight": 0.05,
+   "reason": "+39 12-1m and +10% last month into peak season with pricing power on surcharges."
+  },
+  {
+   "symbol": "MSFT",
+   "weight": 0.05,
+   "reason": "Small megacap-tech sleeve: cheapest-quality AI exposure, +19% above its 200-day despite the selloff."
+  }
+ ],
+ "view": "The AI-capex complex is unwinding hard (NVDA -27% over 3m and -13% last week, chips dragging the tape) while SPY is only -2.3% on the month, which tells me the damage is concentrated and leadership is rotating into healthcare, staples, energy and low-vol quality. I don't want to own the deleveraging trade or pay 40-90 vol for it, so I'm building a cash-flow book: cheap large pharma with real earnings momentum, integrated energy with the strongest 12-1 momentum in the table, consumer staples, insurance and rails. I deliberately avoid the Berkshire top-5 names, keep one modest megacap-tech sleev",
+ "cash": 0.12
+}

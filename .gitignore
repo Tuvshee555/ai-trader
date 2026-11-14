@@ -2,5 +2,5 @@
 .env.*
 trader/state/
 trader/cache/
-trader/engine/
+trader/engine/task.log
 __pycache__/

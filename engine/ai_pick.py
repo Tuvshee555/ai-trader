@@ -25,7 +25,10 @@ PICKS = os.path.join(STATE_DIR, "ai_picks.json")
 AI_DIR = os.path.join(STATE_DIR, "ai")
 MAX_W = 0.15
 MIN_NAMES, MAX_NAMES = 5, 15
-MODEL = "opus"
+# In the cloud (GitHub Actions) there is no Claude subscription, so AI_BACKEND=openai
+# uses the OpenAI key once a week instead. On this PC the default is the Claude CLI.
+BACKEND = os.environ.get("AI_BACKEND", "claude")
+MODEL = {"claude": "opus", "openai": "gpt-5.5"}.get(BACKEND, "opus")
 TIMEOUT = 900
 
 
@@ -127,6 +130,28 @@ def build_prompt(session, signal_date, closes, i, current):
     return "\n".join(lines)
 
 
+def ask(prompt):
+    return ask_openai(prompt) if BACKEND == "openai" else ask_claude(prompt)
+
+
+def ask_openai(prompt):
+    """One Chat Completions call. Roughly 15k tokens in, a few thousand out, once a week."""
+    import urllib.request
+    from common import env
+    key = env().get("OPENAI_API_KEY") or os.environ.get("OPENAI_API_KEY")
+    if not key:
+        raise RuntimeError("no OPENAI_API_KEY")
+    body = {"model": MODEL, "reasoning_effort": "medium", "response_format": {"type": "json_object"},
+            "messages": [{"role": "user", "content": prompt}]}
+    req = urllib.request.Request("https://api.openai.com/v1/chat/completions", data=json.dumps(body).encode(),
+                                 headers={"Authorization": "Bearer " + key, "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+        doc = json.load(r)
+    usage = doc.get("usage") or {}
+    print("  OpenAI %s used %s tokens in, %s out" % (MODEL, usage.get("prompt_tokens"), usage.get("completion_tokens")))
+    return doc["choices"][0]["message"]["content"]
+
+
 def ask_claude(prompt):
     exe = shutil.which("claude") or os.path.join(os.path.expanduser("~"), ".local", "bin", "claude.exe")
     os.makedirs(AI_DIR, exist_ok=True)
@@ -168,7 +193,7 @@ def check(answer):
 def make(session, signal_date, closes, i, current):
     prompt = build_prompt(session, signal_date, closes, i, current)
     started = datetime.datetime.now(datetime.timezone.utc)
-    answer = ask_claude(prompt)
+    answer = ask(prompt)
     record = {"session": session, "signal_date": signal_date, "model": MODEL,
               "asked_at": started.isoformat(timespec="seconds"), "prompt": prompt, "answer": answer}
     try:

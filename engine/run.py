@@ -84,7 +84,8 @@ def main():
     state = read(STATE, {})
     if state.get("last_session") == session and not (a.force or a.dry):
         print("Already ran for the %s session." % session)
-        if state.get("start"):   # the tournament retries on its own if it failed last time
+        books_doc = read(os.path.join(STATE_DIR, "books.json"), {})
+        if state.get("start") and books_doc.get("last_session") != session:   # retry a failed tournament step
             tournament(session, load_bars(UNIVERSE + [BENCH]), False, engine_score(state, acct))
         return
 

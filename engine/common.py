@@ -27,7 +27,7 @@ def env():
             m = re.match(r"\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$", line)
             if m:
                 out[m.group(1)] = m.group(2)
-    for k in ("ALPACA_API_KEY", "ALPACA_SECRET_KEY"):
+    for k in ("ALPACA_API_KEY", "ALPACA_SECRET_KEY", "OPENAI_API_KEY"):
         out.setdefault(k, os.environ.get(k, ""))
     return out
 

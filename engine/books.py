@@ -33,6 +33,7 @@ START_CASH = 40000.0
 BOOKS = os.path.join(STATE_DIR, "books.json")
 TOURNAMENT = os.path.join(STATE_DIR, "tournament.csv")
 LOG = os.path.join(STATE_DIR, "log.jsonl")
+VERDICT = "2026-12-14"   # one month after the start, as agreed on 2026-11-14
 
 PLAYERS = {
     "momentum": {"label": "Momentum only", "every": 5, "backfill": True},
@@ -199,6 +200,32 @@ def step(session, bars, dry=False, engine=None, allow_ai=True):
     doc["last_session"] = session
     json.dump(doc, open(BOOKS, "w", encoding="utf-8"), indent=1)
     show(rows)
+    scoreboard(rows, session)
+
+
+def scoreboard(rows, session):
+    """SCOREBOARD.md at the repo root: the page to open on a phone."""
+    done = session >= VERDICT
+    out = ["# Tournament scoreboard", "",
+           "Paper money, $40,000 per player. Updated after the %s session (%s UTC)." % (
+               session, datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M")), "",
+           ("**Verdict (%s): %s wins.** Losers get dropped; the winner gets the money." % (VERDICT, rows[0]["label"]))
+           if done and rows else "Verdict on **%s**. Until then the leader can still change." % VERDICT, "",
+           "| # | Player | Since | Value | Return | SPY same dates | vs SPY |",
+           "| --- | --- | --- | --- | --- | --- | --- |"]
+    for n, r in enumerate(rows, 1):
+        out.append("| %d | %s | %s | $%s | %+.2f%% | %+.2f%% | **%+.2f** |" % (
+            n, r["label"], r["since"], format(r["value"], ",.0f"), r["ret"], r["spy"], r["ret"] - r["spy"]))
+    picks = _read(os.path.join(STATE_DIR, "ai_picks.json"), None)
+    if picks:
+        out += ["", "## Latest AI picks (%s session, %s)" % (picks["session"], picks.get("model", "")), "",
+                picks.get("view", ""), "", "| Stock | Weight | Why |", "| --- | --- | --- |"]
+        out += ["| %s | %.0f%% | %s |" % (p["symbol"], p["weight"] * 100, p["reason"].replace("|", "/"))
+                for p in picks["picks"]]
+        out.append("| cash | %.0f%% | |" % (picks.get("cash", 0) * 100))
+    out += ["", "One month is mostly luck: a lead of a point or two proves nothing. See README.md for how it works."]
+    with open(os.path.join(ROOT, "SCOREBOARD.md"), "w", encoding="utf-8") as fh:
+        fh.write("\n".join(out) + "\n")
 
 
 def table(books, px, engine=None):

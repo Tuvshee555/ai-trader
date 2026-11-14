@@ -2,9 +2,11 @@
 
 An experiment: can a rules-based engine beat simply holding the S&P 500? It trades **fake money** on an Alpaca paper account. Nothing here can reach a live account: the trading URL is hard-coded to Alpaca's paper endpoint.
 
+**The live score is in [SCOREBOARD.md](SCOREBOARD.md)**, updated after every market day.
+
 ## What runs
 
-`engine/` is the trader. Every market day at 22:45 (Ulaanbaatar time) a Windows scheduled task named `ai-trader-engine` runs `engine/run.py`:
+`engine/` is the trader. It runs in the cloud on GitHub Actions (`.github/workflows/daily.yml`), so no computer has to be on. Every market day at 22:45 Ulaanbaatar time (14:45 UTC, with a backup run at 18:00 UTC) it runs `engine/run.py` and commits the state in `trader/engine/` and the scoreboard back to this repo. The keys are GitHub Actions secrets. Each run:
 
 1. Downloads daily prices for about 100 of the largest US companies.
 2. Four signals each rank every stock, and the votes are combined into one score:
@@ -31,9 +33,9 @@ The engine competes with other players, each with its own $40,000, on one scoreb
 | AI judgement | Claude reads prices and headlines and picks 5 to 15 stocks (`engine/ai_pick.py`) | weekly |
 | All 100 equally | the fair bar | monthly |
 
-Every book is compared with SPY over its own dates. Only the engine sends orders to Alpaca. The others are shadow books in `trader/engine/books.json`, filled at the price when the daily run happens with the same 0.10% cost. The mechanical players started at the engine's first session, filled at that day's open. The AI player started at its first pick. After about three months the losers are dropped and the winner gets the money.
+Every book is compared with SPY over its own dates. Only the engine sends orders to Alpaca. The others are shadow books in `trader/engine/books.json`, filled at the price when the daily run happens with the same 0.10% cost. The mechanical players started at the engine's first session, filled at that day's open. The AI player started at its first pick. The verdict is on 2026-12-14: the losers are dropped and the winner gets the money. One month is short, so a small lead then is mostly luck.
 
-The AI player runs the Claude Code CLI on the Claude subscription with every tool switched off, once a week. It costs no API money. Its answer is checked before use (known symbols, at most 15% each, 5 to 15 stocks), and every prompt and answer is kept in `trader/engine/ai/`.
+The AI player decides once a week. In the cloud it makes one OpenAI call (`gpt-5.5`, well under $1 a month). Run on a PC, `engine/ai_pick.py` uses the Claude Code CLI on the Claude subscription instead, with every tool switched off. The first pick (2026-11-16 session) was made that way. Its answer is checked before use (known symbols, at most 15% each, 5 to 15 stocks), and every prompt and answer is kept in `trader/engine/ai/`.
 
 ## Commands
 
