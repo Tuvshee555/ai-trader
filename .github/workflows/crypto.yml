@@ -1,0 +1,42 @@
+# The crypto day trader checks the market every hour, all week (crypto never closes).
+# It commits only when it traded, plus a page refresh every 6 hours, so the repo
+# does not get a commit every hour.
+name: crypto day trader
+
+on:
+  schedule:
+    - cron: "7 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trader-crypto
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Check the market
+        run: python3 engine/crypto.py
+
+      - name: Save trades and page
+        run: |
+          git config user.name "ai-trader bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- 'trader/engine/crypto*'
+          if git diff --cached --quiet && [ $(( 10#$(date -u +%H) % 6 )) -ne 0 ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+            echo "No trades this hour."; exit 0
+          fi
+          git add CRYPTO.md
+          if git diff --cached --quiet; then echo "Nothing new."; exit 0; fi
+          git commit -m "Crypto check $(date -u '+%F %H:%M')"
+          git pull --rebase origin main
+          git push origin HEAD:main

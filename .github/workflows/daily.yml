@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: trader
+  group: trader-stocks
   cancel-in-progress: false
 
 jobs:
@@ -23,6 +23,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v5
+        with:
+          ref: main   # the latest state, even if this run waited behind another
 
       - name: Engine and tournament
         env:

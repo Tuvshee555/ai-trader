@@ -2,7 +2,11 @@
 
 An experiment: can a rules-based engine beat simply holding the S&P 500? It trades **fake money** on an Alpaca paper account. Nothing here can reach a live account: the trading URL is hard-coded to Alpaca's paper endpoint.
 
-**The live score is in [SCOREBOARD.md](SCOREBOARD.md)**, updated after every market day.
+**The live score is in [SCOREBOARD.md](SCOREBOARD.md)**, updated after every market day. The crypto day trader is on **[CRYPTO.md](CRYPTO.md)**.
+
+## Crypto day trader
+
+`engine/crypto.py` runs every hour in the cloud (`.github/workflows/crypto.yml`), all week. It is a $10,000 paper ledger priced from Coinbase's free live data, and it does not touch the Alpaca account. It scans every USD coin with at least $1M traded in 24 hours and buys the ones pumping: up 8% or more in 24 hours, breaking above the last 6 hours' high on at least twice the usual volume. It holds up to 5 coins at 20% of the book each and sells 10% below the peak since buying, or after 24 hours. Every buy and sell pays 0.5% for fees and spread. It is compared with just holding Bitcoin and just holding 14 meme coins over the same dates. The rules were fixed before the first run.
 
 ## What runs
 

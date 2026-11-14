@@ -223,7 +223,8 @@ def scoreboard(rows, session):
         out += ["| %s | %.0f%% | %s |" % (p["symbol"], p["weight"] * 100, p["reason"].replace("|", "/"))
                 for p in picks["picks"]]
         out.append("| cash | %.0f%% | |" % (picks.get("cash", 0) * 100))
-    out += ["", "One month is mostly luck: a lead of a point or two proves nothing. See README.md for how it works."]
+    out += ["", "One month is mostly luck: a lead of a point or two proves nothing. See README.md for how it works.",
+            "", "Crypto: the meme-coin day trader has its own page, [CRYPTO.md](CRYPTO.md), checked every hour."]
     with open(os.path.join(ROOT, "SCOREBOARD.md"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(out) + "\n")
 
