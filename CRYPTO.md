@@ -1,12 +1,12 @@
 # Crypto day trader
 
-Paper money, $10,000 each, started 2026-11-14 07:20 UTC. Updated 2026-11-15 11:07 UTC. Prices: Coinbase, live.
+Paper money, $10,000 each, started 2026-11-14 07:20 UTC. Updated 2026-11-15 12:07 UTC. Prices: Coinbase, live.
 
 | Player | Value | Return |
 | --- | --- | --- |
 | Meme-coin day trader | $9,782.09 | **-2.18%** |
-| Just hold Bitcoin | $9,771.16 | **-2.29%** |
-| Just hold 14 meme coins | $9,346.29 | **-6.54%** |
+| Just hold Bitcoin | $9,743.97 | **-2.56%** |
+| Just hold 14 meme coins | $9,337.64 | **-6.62%** |
 
 Closed trades: 1, winners: 0 (0%). Fees and spread paid: $18.91.
 
