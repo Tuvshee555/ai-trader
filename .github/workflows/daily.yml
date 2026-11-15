@@ -1,4 +1,5 @@
-# The daily run in the cloud, so the PC does not have to be on.
+# The daily run in the cloud, so the PC does not have to be on. The Vercel clock
+# (clock/) starts it on time; the schedule below is a backup (GitHub runs it late or skips it).
 # 14:45 UTC is 22:45 in Ulaanbaatar, 15 minutes after the New York open in winter.
 # The 18:00 UTC run is a backup for a skipped or failed one; it does nothing if the
 # session already ran. State lives in trader/engine/ and is committed back here.

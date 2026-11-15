@@ -1,12 +1,18 @@
 # The crypto day trader checks the market every hour, all week (crypto never closes).
-# It commits only when it traded, plus a page refresh every 6 hours, so the repo
-# does not get a commit every hour.
+# The Vercel clock (clock/) starts it at :07 every hour; GitHub's own schedule is a
+# backup that fires late or not at all. It commits only when it traded, plus a page
+# refresh every 6 hours, so the repo does not get a commit every hour. A run started
+# by hand always refreshes the page.
 name: crypto day trader
 
 on:
   schedule:
     - cron: "7 * * * *"
   workflow_dispatch:
+    inputs:
+      source:
+        description: "who started it (the clock passes 'clock')"
+        default: manual
 
 permissions:
   contents: write
@@ -32,7 +38,7 @@ jobs:
           git config user.name "ai-trader bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- 'trader/engine/crypto*'
-          if git diff --cached --quiet && [ $(( 10#$(date -u +%H) % 6 )) -ne 0 ] && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+          if git diff --cached --quiet && [ $(( 10#$(date -u +%H) % 6 )) -ne 0 ] && [ "${{ inputs.source }}" != "manual" ]; then
             echo "No trades this hour."; exit 0
           fi
           git add CRYPTO.md

@@ -4,3 +4,4 @@ trader/state/
 trader/cache/
 trader/engine/task.log
 __pycache__/
+.vercel/

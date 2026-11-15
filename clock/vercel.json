@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "git": { "deploymentEnabled": false },
+  "crons": [
+    { "path": "/api/tick?wf=crypto", "schedule": "7 * * * *" },
+    { "path": "/api/tick?wf=daily", "schedule": "45 14 * * 1-5" },
+    { "path": "/api/tick?wf=daily", "schedule": "0 18 * * 1-5" }
+  ]
+}
