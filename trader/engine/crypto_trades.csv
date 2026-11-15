@@ -1,3 +1,4 @@
 time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-15 08:07,buy,NCT-USD,0.00995,200005.0001,2000.00,pump +36.3%,,
 2026-11-15 10:00,sell,NCT-USD,0.008955,200005.0001,1782.09,trailing stop,-217.91,-10.90
+2026-11-15 20:07,buy,RARE-USD,0.01486,131001.6479,1956.42,pump +74.2%,,
