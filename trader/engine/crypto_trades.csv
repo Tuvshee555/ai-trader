@@ -3,3 +3,5 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-15 10:00,sell,NCT-USD,0.008955,200005.0001,1782.09,trailing stop,-217.91,-10.90
 2026-11-15 20:07,buy,RARE-USD,0.01486,131001.6479,1956.42,pump +74.2%,,
 2026-11-15 21:07,buy,ASTER-USD,0.6665,2879.322668,1928.66,pump +31.3%,,
+2026-11-15 21:00,sell,RARE-USD,0.013374,131001.6479,1743.26,trailing stop,-213.16,-10.90
+2026-11-15 22:00,sell,ASTER-USD,0.5195,2879.322668,1488.33,trailing stop,-440.33,-22.83

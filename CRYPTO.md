@@ -1,26 +1,25 @@
 # Crypto day trader
 
-Paper money, $10,000 each, started 2026-11-14 07:20 UTC. Updated 2026-11-15 21:07 UTC. Prices: Coinbase, live.
+Paper money, $10,000 each, started 2026-11-14 07:20 UTC. Updated 2026-11-15 22:07 UTC. Prices: Coinbase, live.
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,704.57 | **-2.95%** |
-| Meme-coin day trader | $9,633.72 | **-3.66%** |
-| Just hold 14 meme coins | $9,323.89 | **-6.76%** |
+| Just hold Bitcoin | $9,720.02 | **-2.80%** |
+| Just hold 14 meme coins | $9,212.92 | **-7.87%** |
+| Meme-coin day trader | $9,128.59 | **-8.71%** |
 
-Closed trades: 1, winners: 0 (0%). Fees and spread paid: $38.23.
+Closed trades: 3, winners: 0 (0%). Fees and spread paid: $54.47.
 
 ## Holding now
 
-| Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
-| --- | --- | --- | --- | --- | --- | --- |
-| RARE-USD | 2026-11-15 20:07 | 0.01486 | 0.013875 | -7.6% | 0.013374 | 2026-11-16 20:07 |
-| ASTER-USD | 2026-11-15 21:07 | 0.6665 | 0.6665 | -1.0% | 0.59985 | 2026-11-16 21:07 |
+Nothing. Cash, waiting for a coin that pumps.
 
 ## Last trades
 
 | Time (UTC) | Side | Coin | Price | $ | Why | P&L |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-15 22:00 | sell | ASTER-USD | 0.5195 | 1488.33 | trailing stop | $-440.33 (-22.83%) |
+| 2026-11-15 21:00 | sell | RARE-USD | 0.013374 | 1743.26 | trailing stop | $-213.16 (-10.90%) |
 | 2026-11-15 21:07 | buy | ASTER-USD | 0.6665 | 1928.66 | pump +31.3% |  |
 | 2026-11-15 20:07 | buy | RARE-USD | 0.01486 | 1956.42 | pump +74.2% |  |
 | 2026-11-15 10:00 | sell | NCT-USD | 0.008955 | 1782.09 | trailing stop | $-217.91 (-10.90%) |
