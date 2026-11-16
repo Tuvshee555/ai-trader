@@ -18,8 +18,9 @@ Rules, fixed before the first run and not tuned:
   size   20% of the book per coin, at most 5 coins at once
   sell   10% below the highest price since buying (a trailing stop, which is
          also the stop loss), or after 24 hours, whichever comes first.
-         The stop is checked against every hourly candle, so it acts like a
-         stop order resting at the exchange.
+         The stop is checked against every 5-minute candle since buying, so it
+         acts like a stop order resting at the exchange (a gap down fills at
+         the open below the stop, as a real stop order would).
   wait   no buying the same coin again for 24 hours after selling it
 Benchmarks over the same dates: just holding Bitcoin, and just holding a basket
 of meme coins. If the trader cannot beat holding the same kind of coins, the
@@ -82,12 +83,22 @@ def products():
     return out
 
 
-def candles(pid, since):
-    """Hourly candles from `since` (unix) to now, oldest first, as floats."""
-    now = int(time.time())
-    rows = get("/products/%s/candles?start=%d&end=%d&granularity=ONE_HOUR" % (pid, int(since), now)).get("candles", [])
-    out = [{k: float(c[k]) for k in ("start", "open", "high", "low", "close", "volume")} for c in rows]
-    return sorted(out, key=lambda c: c["start"])
+STEP = {"ONE_HOUR": 3600, "FIVE_MINUTE": 300}
+
+
+def candles(pid, since, granularity="ONE_HOUR"):
+    """Candles from `since` (unix) to now, oldest first, as floats. Coinbase returns at most
+    350 per call, so longer spans are fetched in pieces of 300."""
+    now, step = int(time.time()), STEP[granularity]
+    got, start = {}, int(since)
+    while start < now:
+        end = min(now, start + 300 * step)
+        rows = get("/products/%s/candles?start=%d&end=%d&granularity=%s" % (pid, start, end, granularity)).get(
+            "candles", [])
+        for c in rows:
+            got[int(c["start"])] = {k: float(c[k]) for k in ("start", "open", "high", "low", "close", "volume")}
+        start = end
+    return [got[k] for k in sorted(got)]
 
 
 def _f(p, k):
@@ -129,9 +140,12 @@ def value(ledger, px):
 def check_exits(ledger, px, now, dry, out):
     for coin, pos in list(ledger["positions"].items()):
         peak, exit_px, reason, when = pos["entry"], None, None, now
-        for c in candles(coin, pos["t"]):
+        # 5-minute candles from the moment of buying. Until 2026-11-16 this walked hourly candles and
+        # skipped the hour of the buy, so a crash in the first hour was sold at the next hour's open
+        # instead of at the stop (ASTER: -22.8% instead of about -11%).
+        for c in candles(coin, pos["t"], "FIVE_MINUTE"):
             if c["start"] < pos["t"]:
-                continue   # the hour we bought in is only partly ours; the live price covers it
+                continue   # the 5 minutes we bought in are only partly ours
             stop = peak * (1 - TRAIL)
             if c["low"] <= stop:
                 exit_px, reason, when = min(stop, c["open"]), "trailing stop", c["start"]
