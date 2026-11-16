@@ -1,15 +1,16 @@
 # Tournament scoreboard
 
-Paper money, $40,000 per player. Updated after the 2026-11-13 session (2026-11-14 07:29 UTC).
+Paper money, $40,000 per player. Updated after the 2026-11-16 session (2026-11-16 14:46 UTC).
 
 Verdict on **2026-12-14**. Until then the leader can still change.
 
 | # | Player | Since | Value | Return | SPY same dates | vs SPY |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Engine (4 signals vote) | 2026-11-13 | $40,060 | +0.15% | -1.05% | **+1.20** |
-| 2 | All 100 equally (fair bar) | 2026-11-13 | $39,862 | -0.35% | -1.05% | **+0.70** |
-| 3 | Copy Berkshire 13F | 2026-11-13 | $39,824 | -0.44% | -1.05% | **+0.61** |
-| 4 | Momentum only | 2026-11-13 | $39,786 | -0.53% | -1.05% | **+0.52** |
+| 1 | Engine (4 signals vote) | 2026-11-13 | $40,080 | +0.20% | -1.46% | **+1.66** |
+| 2 | All 100 equally (fair bar) | 2026-11-13 | $39,817 | -0.46% | -1.46% | **+1.00** |
+| 3 | Copy Berkshire 13F | 2026-11-13 | $39,617 | -0.96% | -1.46% | **+0.50** |
+| 4 | Momentum only | 2026-11-13 | $39,486 | -1.28% | -1.46% | **+0.17** |
+| 5 | AI judgement (Claude) | 2026-11-16 | $39,967 | -0.08% | +0.00% | **-0.08** |
 
 ## Latest AI picks (2026-11-16 session, opus)
 
