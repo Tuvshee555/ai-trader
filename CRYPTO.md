@@ -1,27 +1,27 @@
 # Crypto day trader
 
-Paper money, $10,000 each, started 2026-11-14 07:20 UTC. Updated 2026-11-17 15:07 UTC. Prices: Coinbase, live.
+Paper money, $10,000 each, started 2026-11-14 07:20 UTC. Updated 2026-11-17 16:07 UTC. Prices: Coinbase, live.
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,633.22 | **-3.67%** |
-| Just hold 14 meme coins | $9,223.41 | **-7.77%** |
-| Meme-coin day trader | $9,101.84 | **-8.98%** |
+| Just hold Bitcoin | $9,577.24 | **-4.23%** |
+| Just hold 14 meme coins | $9,153.28 | **-8.47%** |
+| Meme-coin day trader | $9,053.71 | **-9.46%** |
 
-Closed trades: 5, winners: 0 (0%). Fees and spread paid: $120.80.
+Closed trades: 6, winners: 0 (0%). Fees and spread paid: $129.55.
 
 ## Holding now
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| ASTER-USD | 2026-11-17 01:07 | 0.5746 | 0.5441 | -6.3% | 0.5391 | 2026-11-18 01:07 |
-| INJ-USD | 2026-11-17 05:07 | 7.368 | 7.356 | -1.2% | 6.9552 | 2026-11-18 05:07 |
-| PEARL-USD | 2026-11-17 13:07 | 1.76 | 1.7503 | -1.5% | 1.61631 | 2026-11-18 13:07 |
+| INJ-USD | 2026-11-17 05:07 | 7.368 | 7.266 | -2.4% | 6.9552 | 2026-11-18 05:07 |
+| PEARL-USD | 2026-11-17 13:07 | 1.76 | 1.75 | -1.6% | 1.61631 | 2026-11-18 13:07 |
 
 ## Last trades
 
 | Time (UTC) | Side | Coin | Price | $ | Why | P&L |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-17 15:45 | sell | ASTER-USD | 0.5391 | 1741.84 | trailing stop | $-133.36 (-7.11%) |
 | 2026-11-17 14:30 | sell | ICP-USD | 2.30733 | 1749.08 | trailing stop | $-133.25 (-7.08%) |
 | 2026-11-17 13:07 | buy | PEARL-USD | 1.76 | 1875.74 | pump +8.5% |  |
 | 2026-11-17 05:07 | buy | INJ-USD | 7.368 | 1877.77 | pump +8.4% |  |

@@ -12,3 +12,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-17 05:07,buy,INJ-USD,7.368,253.58628,1877.77,pump +8.4%,,
 2026-11-17 13:07,buy,PEARL-USD,1.76,1060.457339,1875.74,pump +8.5%,,
 2026-11-17 14:30,sell,ICP-USD,2.30733,761.8634205,1749.08,trailing stop,-133.25,-7.08
+2026-11-17 15:45,sell,ASTER-USD,0.5391,3247.252644,1741.84,trailing stop,-133.36,-7.11
