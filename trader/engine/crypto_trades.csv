@@ -7,3 +7,5 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-15 21:15,sell,ASTER-USD,0.6183,2879.322668,1771.38,trailing stop (5-min recheck),-157.28,-8.15
 2026-11-16 16:00,buy,ICP-USD,2.4584,761.8634205,1882.33,pump +12.9%,,
 2026-11-16 22:07,buy,HFT-USD,0.00486,387524.0758,1892.78,pump +19.7%,,
+2026-11-17 00:20,sell,HFT-USD,0.004815,387524.0758,1856.60,trailing stop,-36.19,-1.91
+2026-11-17 01:07,buy,ASTER-USD,0.5746,3247.252644,1875.20,pump +13.2%,,
