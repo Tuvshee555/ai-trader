@@ -1,12 +1,12 @@
 # Crypto day trader
 
-Paper money, $10,000 each, started 2026-11-14 07:20 UTC. Updated 2026-11-16 22:07 UTC. Prices: Coinbase, live.
+Paper money, $10,000 each, started 2026-11-14 07:20 UTC. Updated 2026-11-17 00:06 UTC. Prices: Coinbase, live.
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,757.63 | **-2.42%** |
-| Meme-coin day trader | $9,454.50 | **-5.45%** |
-| Just hold 14 meme coins | $9,308.42 | **-6.92%** |
+| Just hold Bitcoin | $9,654.56 | **-3.45%** |
+| Meme-coin day trader | $9,526.04 | **-4.74%** |
+| Just hold 14 meme coins | $9,242.89 | **-7.57%** |
 
 Closed trades: 3, winners: 0 (0%). Fees and spread paid: $74.68.
 
@@ -14,8 +14,8 @@ Closed trades: 3, winners: 0 (0%). Fees and spread paid: $74.68.
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| ICP-USD | 2026-11-16 16:00 | 2.4584 | 2.5393 | +2.3% | 2.30058 | 2026-11-17 16:00 |
-| HFT-USD | 2026-11-16 22:07 | 0.00486 | 0.00486 | -1.0% | 0.004374 | 2026-11-17 22:07 |
+| ICP-USD | 2026-11-16 16:00 | 2.4584 | 2.4806 | -0.1% | 2.30733 | 2026-11-17 16:00 |
+| HFT-USD | 2026-11-16 22:07 | 0.00486 | 0.00516 | +5.1% | 0.004815 | 2026-11-17 22:07 |
 
 ## Last trades
 
