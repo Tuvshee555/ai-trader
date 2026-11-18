@@ -10,7 +10,7 @@ An experiment: can a rules-based engine beat simply holding the S&P 500? It trad
 
 ## What runs
 
-`engine/` is the trader. It runs in the cloud on GitHub Actions (`.github/workflows/daily.yml`), so no computer has to be on. Every market day at 22:45 Ulaanbaatar time (14:45 UTC, with a backup run at 18:00 UTC) it runs `engine/run.py` and commits the state in `trader/engine/` and the scoreboard back to this repo. The keys are GitHub Actions secrets. The runs are started on time by a small Vercel cron project ([clock/](clock/README.md)), because GitHub's own schedule fires late or not at all (3 of about 20 hourly slots on 2026-11-14); GitHub's schedule stays as a backup. Each run:
+`engine/` is the trader. It runs in the cloud on GitHub Actions (`.github/workflows/daily.yml`), so no computer has to be on. Every market day at 22:45 Ulaanbaatar time (14:45 UTC, with a backup run at 18:00 UTC; it only runs while the market is open, so every player trades at live session prices) it runs `engine/run.py` and commits the state in `trader/engine/` and the scoreboard back to this repo. The keys are GitHub Actions secrets. The runs are started on time by a small Vercel cron project ([clock/](clock/README.md)), because GitHub's own schedule fires late or not at all (3 of about 20 hourly slots on 2026-11-14); GitHub's schedule stays as a backup. Each run:
 
 1. Downloads daily prices for about 100 of the largest US companies.
 2. Four signals each rank every stock, and the votes are combined into one score:

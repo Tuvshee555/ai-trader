@@ -4,9 +4,9 @@
     python engine/run.py --dry      # show what it would do, place nothing
     python engine/run.py --force    # rebalance now even if it is not due
 
-Runs once per market session. It rebalances every `rebalance_days` trading days
-and only logs the score on the days in between. Orders sent before the open
-wait in the queue and fill at the open.
+Runs once per market session, and only while the market is open (--dry works any
+time). It rebalances every `rebalance_days` trading days and only logs the score
+on the days in between.
 """
 import argparse
 import datetime
@@ -79,8 +79,13 @@ def main():
     now = datetime.datetime.fromisoformat(clock["timestamp"][:19])
     nxt = datetime.datetime.fromisoformat(clock["next_open"][:19])
     session = clock["timestamp"][:10] if clock["is_open"] else clock["next_open"][:10]
-    if not clock["is_open"] and (nxt - now).total_seconds() > 18 * 3600:
-        print("Market is closed and the next open is more than 18 hours away. Nothing to do.")
+    if not clock["is_open"] and not a.dry:
+        # Only while the market is open, so the engine and every shadow player trade at live session
+        # prices. GitHub's backup schedule fires hours late; until 2026-11-18 a run after the close
+        # took the next day's session early (shadow players at after-hours prices, the engine at the
+        # next open). The Vercel clock runs at 14:45 and 18:00 UTC, both inside the session.
+        print("Market is closed (next open %s New York time, %.0f hours away). Nothing to do until it opens." % (
+            clock["next_open"][:16].replace("T", " "), (nxt - now).total_seconds() / 3600))
         return
 
     state = read(STATE, {})
