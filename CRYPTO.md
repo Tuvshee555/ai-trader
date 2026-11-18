@@ -1,6 +1,6 @@
 # Crypto day trader
 
-Paper money, $10,000 per trader. Updated 2026-11-18 17:07 UTC. Prices: Coinbase, live. Each trader is compared with holding Bitcoin and holding the meme coins that were alive, over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-18 18:07 UTC. Prices: Coinbase, live. Each trader is compared with holding Bitcoin and holding the meme coins that were alive, over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,376.56 | **-6.23%** |
-| Pump chaser, any coin | $9,022.05 | **-9.78%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,880.40 | **-11.20%** |
+| Just hold Bitcoin | $9,417.85 | **-5.82%** |
+| Pump chaser, any coin | $8,996.47 | **-10.04%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,879.21 | **-11.21%** |
 
 Closed trades: 8, winners: 1 (12%). Fees and spread paid: $166.60.
 
@@ -18,8 +18,8 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| RENDER-USD | 2026-11-18 00:07 | 1.4866 | 1.4132 | -5.9% | 1.33938 | 2026-11-19 00:07 |
-| ICNT-USD | 2026-11-18 11:07 | 0.3248 | 0.3235 | -1.4% | 0.31104 | 2026-11-19 11:07 |
+| RENDER-USD | 2026-11-18 00:07 | 1.4866 | 1.4022 | -6.6% | 1.33938 | 2026-11-19 00:07 |
+| ICNT-USD | 2026-11-18 11:07 | 0.3248 | 0.3213 | -2.1% | 0.31104 | 2026-11-19 11:07 |
 
 Last trades:
 
@@ -45,8 +45,8 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 | Player | Value | Return |
 | --- | --- | --- |
 | Pump chaser, alive coins only | $10,184.41 | **+1.84%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,807.45 | **-1.93%** |
-| Just hold Bitcoin | $9,735.36 | **-2.65%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,804.26 | **-1.96%** |
+| Just hold Bitcoin | $9,778.23 | **-2.22%** |
 
 Closed trades: 1, winners: 1 (100%). Fees and spread paid: $20.93.
 
