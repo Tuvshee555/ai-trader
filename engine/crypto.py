@@ -22,9 +22,13 @@ Rules, fixed before the first run and not tuned:
          acts like a stop order resting at the exchange (a gap down fills at
          the open below the stop, as a real stop order would).
   wait   no buying the same coin again for 24 hours after selling it
-Benchmarks over the same dates: just holding Bitcoin, and just holding a basket
-of meme coins. If the trader cannot beat holding the same kind of coins, the
-trading itself adds nothing.
+Two traders run these rules side by side (TRADERS below). The second, added on
+2026-11-18, also needs the coin to have been alive before the pump: at least $1M
+a day on average over the week before the last 24 hours.
+Benchmarks over each trader's own dates: just holding Bitcoin, and just holding
+the meme coins that were alive (at least $1M a day on average in the week before
+the start). If a trader cannot beat holding the same kind of coins, the trading
+itself adds nothing.
 """
 import argparse
 import datetime
@@ -58,6 +62,19 @@ STABLES = {"USDT", "USDC", "DAI", "PYUSD", "EURC", "USDS", "GUSD", "PAX", "USD1"
            "USDP", "EURT", "GYEN", "LUSD", "FRAX"}
 MEMES = ["DOGE", "SHIB", "PEPE", "BONK", "WIF", "FLOKI", "TRUMP", "PENGU", "FARTCOIN", "SPX", "POPCAT",
          "PNUT", "TURBO", "MOG"]
+ALIVE_DAYS = 7          # "alive" = at least MIN_VOLUME a day on average over the week before
+
+# Two traders with the same rules, side by side. The second one (added 2026-11-18) only buys a
+# pump when the coin was alive the week BEFORE it: the 24-hour volume test alone is passed by
+# the pump's own volume, so the first one kept buying dead coins' one-off pumps (RARE traded
+# $70k a day before its +74% pump). The first one keeps running unchanged so its record stays
+# honest. The meme basket that both are compared with holds only meme coins alive by the same
+# test, so dead coins do not drag it down.
+TRADERS = [
+    {"label": "Pump chaser, any coin", "ledger": LEDGER, "trades": TRADES, "alive_only": False},
+    {"label": "Pump chaser, alive coins only", "ledger": os.path.join(STATE_DIR, "crypto_alive.json"),
+     "trades": os.path.join(STATE_DIR, "crypto_alive_trades.csv"), "alive_only": True},
+]
 
 
 def get(path):
@@ -112,9 +129,20 @@ def stamp(t):
     return datetime.datetime.fromtimestamp(t, datetime.timezone.utc).strftime("%Y-%m-%d %H:%M")
 
 
-def record(row):
-    new = not os.path.exists(TRADES)
-    with open(TRADES, "a", encoding="utf-8") as fh:
+def avg_daily_volume(pid, end, days=ALIVE_DAYS):
+    """Average dollars traded per day over the `days` days before `end` (unix)."""
+    cs = [c for c in candles(pid, end - days * 86400) if c["start"] < end]
+    return sum(c["volume"] * c["close"] for c in cs) / days
+
+
+def alive_memes(px, end):
+    """The meme coins that traded at least MIN_VOLUME a day on average in the week before `end`."""
+    return [m + "-USD" for m in MEMES if m + "-USD" in px and avg_daily_volume(m + "-USD", end) >= MIN_VOLUME]
+
+
+def record(path, row):
+    new = not os.path.exists(path)
+    with open(path, "a", encoding="utf-8") as fh:
         if new:
             fh.write("time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct\n")
         fh.write("%s,%s,%s,%.10g,%.10g,%.2f,%s,%s,%s\n" % (
@@ -125,7 +153,7 @@ def record(row):
 
 def new_ledger(px):
     t = time.time()
-    memes = [m + "-USD" for m in MEMES if m + "-USD" in px]
+    memes = alive_memes(px, t) or [m + "-USD" for m in MEMES if m + "-USD" in px]
     return {"start": {"t": t, "cash": START_CASH},
             "cash": START_CASH, "positions": {}, "cooldown": {},
             "bench": {"btc": {"BTC-USD": START_CASH / px["BTC-USD"]},
@@ -137,7 +165,7 @@ def value(ledger, px):
     return ledger["cash"] + sum(p["qty"] * px.get(c, p["entry"]) for c, p in ledger["positions"].items())
 
 
-def check_exits(ledger, px, now, dry, out):
+def check_exits(ledger, px, now, dry, out, trades):
     for coin, pos in list(ledger["positions"].items()):
         peak, exit_px, reason, when = pos["entry"], None, None, now
         # 5-minute candles from the moment of buying. Until 2026-11-16 this walked hourly candles and
@@ -171,8 +199,8 @@ def check_exits(ledger, px, now, dry, out):
         ledger["stats"]["fees"] += pos["qty"] * exit_px * COST
         ledger["cooldown"][coin] = when + COOLDOWN
         del ledger["positions"][coin]
-        record({"t": when, "side": "sell", "coin": coin, "price": exit_px, "qty": pos["qty"], "usd": got,
-                "reason": reason, "pnl": pnl, "pnl_pct": pnl / pos["cost"] * 100})
+        record(trades, {"t": when, "side": "sell", "coin": coin, "price": exit_px, "qty": pos["qty"], "usd": got,
+                        "reason": reason, "pnl": pnl, "pnl_pct": pnl / pos["cost"] * 100})
 
 
 def candidates(prods, ledger, now):
@@ -190,7 +218,8 @@ def candidates(prods, ledger, now):
     return [pid for _chg, pid in sorted(out, reverse=True)]
 
 
-def check_entries(ledger, prods, px, now, dry, out):
+def check_entries(ledger, prods, px, now, dry, out, trades, alive_only, seen):
+    """`seen` is shared by both traders in one run, so each coin is fetched once."""
     slots = MAX_COINS - len(ledger["positions"])
     if slots <= 0:
         return
@@ -198,7 +227,10 @@ def check_entries(ledger, prods, px, now, dry, out):
     for pid in candidates(prods, ledger, now)[:12]:
         if slots <= 0:
             break
-        cs = [c for c in candles(pid, now - 30 * 3600) if c["start"] + 3600 <= now]   # finished hours only
+        if pid not in seen:
+            cs = [c for c in candles(pid, now - 30 * 3600) if c["start"] + 3600 <= now]   # finished hours only
+            seen[pid] = {"cs": cs}
+        cs = seen[pid]["cs"]
         if len(cs) < BREAKOUT_HOURS + 2:
             continue
         last, prev = cs[-1], cs[-1 - BREAKOUT_HOURS:-1]
@@ -206,8 +238,15 @@ def check_entries(ledger, prods, px, now, dry, out):
         usual = vols[len(vols) // 2] if vols else 0
         breakout = last["close"] > max(c["high"] for c in prev)
         surge = usual > 0 and last["volume"] >= VOLUME_SURGE * usual
-        looked.append("%s %+.0f%%%s%s" % (pid, _f(prods[pid], "price_percentage_change_24h"),
-                                          "" if breakout else " no-breakout", "" if surge else " no-volume"))
+        note = "%s %+.0f%%%s%s" % (pid, _f(prods[pid], "price_percentage_change_24h"),
+                                   "" if breakout else " no-breakout", "" if surge else " no-volume")
+        if breakout and surge and alive_only:
+            if "before" not in seen[pid]:   # the week before the last 24 hours, so the pump itself is left out
+                seen[pid]["before"] = avg_daily_volume(pid, now - 86400)
+            if seen[pid]["before"] < MIN_VOLUME:
+                looked.append(note + " dead-before ($%.2fM/day)" % (seen[pid]["before"] / 1e6))
+                continue
+        looked.append(note)
         if not (breakout and surge):
             continue
         equity = value(ledger, px)
@@ -224,28 +263,33 @@ def check_entries(ledger, prods, px, now, dry, out):
         ledger["cash"] -= spend
         ledger["stats"]["fees"] += spend - qty * px[pid]
         ledger["positions"][pid] = {"qty": qty, "entry": px[pid], "t": now, "cost": spend, "peak": px[pid]}
-        record({"t": now, "side": "buy", "coin": pid, "price": px[pid], "qty": qty, "usd": spend,
-                "reason": "pump %+.1f%%" % _f(prods[pid], "price_percentage_change_24h")})
+        record(trades, {"t": now, "side": "buy", "coin": pid, "price": px[pid], "qty": qty, "usd": spend,
+                        "reason": "pump %+.1f%%" % _f(prods[pid], "price_percentage_change_24h")})
     if looked:
         out("  looked at: " + ", ".join(looked))
 
 
-def page(ledger, px, now):
-    v = value(ledger, px)
-    b = sum(q * px.get(c, 0) for c, q in ledger["bench"]["btc"].items())
-    m = sum(q * px.get(c, 0) for c, q in ledger["bench"]["memes"].items())
+def scores(trader, ledger, px):
+    """[(name, value)] for the trader and its two benchmarks over the same dates."""
+    names = [c.replace("-USD", "") for c in ledger["bench"]["memes"]]
+    return [(trader["label"], value(ledger, px)),
+            ("Just hold Bitcoin", sum(q * px.get(c, 0) for c, q in ledger["bench"]["btc"].items())),
+            ("Just hold %d alive meme coins (%s)" % (len(names), ", ".join(names)),
+             sum(q * px.get(c, 0) for c, q in ledger["bench"]["memes"].items()))]
+
+
+def section(trader, ledger, px):
     s = ledger["stats"]
-    rows = [("Meme-coin day trader", v), ("Just hold Bitcoin", b), ("Just hold %d meme coins" % len(
-        ledger["bench"]["memes"]), m)]
-    out = ["# Crypto day trader", "",
-           "Paper money, $%s each, started %s UTC. Updated %s UTC. Prices: Coinbase, live." % (
-               format(START_CASH, ",.0f"), stamp(ledger["start"]["t"]), stamp(now)), "",
+    rule = ("Buys a pump only if the coin traded at least $1M a day on average in the week before it."
+            if trader["alive_only"] else "Buys any coin that pumps, even one that was dead before.")
+    out = ["## %s" % trader["label"], "",
+           "Started %s UTC with $%s. %s" % (stamp(ledger["start"]["t"]), format(START_CASH, ",.0f"), rule), "",
            "| Player | Value | Return |", "| --- | --- | --- |"]
-    for name, val in sorted(rows, key=lambda r: -r[1]):
+    for name, val in sorted(scores(trader, ledger, px), key=lambda r: -r[1]):
         out.append("| %s | $%s | **%+.2f%%** |" % (name, format(val, ",.2f"), (val / START_CASH - 1) * 100))
     out += ["", "Closed trades: %d, winners: %d (%s). Fees and spread paid: $%s." % (
         s["trades"], s["wins"], ("%.0f%%" % (100.0 * s["wins"] / s["trades"])) if s["trades"] else "n/a",
-        format(s["fees"], ",.2f")), "", "## Holding now", ""]
+        format(s["fees"], ",.2f")), "", "Holding now:", ""]
     if ledger["positions"]:
         out += ["| Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |",
                 "| --- | --- | --- | --- | --- | --- | --- |"]
@@ -256,18 +300,28 @@ def page(ledger, px, now):
                 p.get("peak", p["entry"]) * (1 - TRAIL), stamp(p["t"] + MAX_HOLD)))
     else:
         out.append("Nothing. Cash, waiting for a coin that pumps.")
-    out += ["", "## Last trades", "", "| Time (UTC) | Side | Coin | Price | $ | Why | P&L |", "| --- | --- | --- | --- | --- | --- | --- |"]
-    if os.path.exists(TRADES):
-        lines = open(TRADES, encoding="utf-8").read().splitlines()[1:]
-        for line in reversed(lines[-20:]):
+    lines = open(trader["trades"], encoding="utf-8").read().splitlines()[1:] if os.path.exists(trader["trades"]) else []
+    if lines:
+        out += ["", "Last trades:", "", "| Time (UTC) | Side | Coin | Price | $ | Why | P&L |",
+                "| --- | --- | --- | --- | --- | --- | --- |"]
+        for line in reversed(lines[-12:]):
             t, side, coin, price, _q, usd, why, pnl, pct = line.split(",")
             out.append("| %s | %s | %s | %s | %s | %s | %s |" % (
                 t, side, coin, price, usd, why, ("$%s (%s%%)" % (pnl, pct)) if pnl else ""))
-    out += ["", "Rules are in `engine/crypto.py`. Most people who day-trade meme coins lose money; "
-            "this page shows whether this rulebook does too."]
+    return out + [""]
+
+
+def page(books, px, now):
+    out = ["# Crypto day trader", "",
+           "Paper money, $%s per trader. Updated %s UTC. Prices: Coinbase, live. Each trader is compared with "
+           "holding Bitcoin and holding the meme coins that were alive, over its own dates." % (
+               format(START_CASH, ",.0f"), stamp(now)), ""]
+    for trader, ledger in books:
+        out += section(trader, ledger, px)
+    out += ["Rules are in `engine/crypto.py`. Most people who day-trade meme coins lose money; "
+            "this page shows whether these rulebooks do too."]
     with open(PAGE, "w", encoding="utf-8") as fh:
         fh.write("\n".join(out) + "\n")
-    return rows
 
 
 def main():
@@ -277,20 +331,27 @@ def main():
     now = time.time()
     prods = products()
     px = {pid: _f(p, "price") for pid, p in prods.items()}
-    ledger = json.load(open(LEDGER, encoding="utf-8")) if os.path.exists(LEDGER) else new_ledger(px)
-    print("Crypto check %s UTC, %d coins listed, %d holding" % (stamp(now), len(prods), len(ledger["positions"])))
-    check_exits(ledger, px, now, a.dry, print)
-    check_entries(ledger, prods, px, now, a.dry, print)
-    ledger["cooldown"] = {c: t for c, t in ledger["cooldown"].items() if t > now}
-    if a.dry:
-        return
-    os.makedirs(STATE_DIR, exist_ok=True)
-    peaks = {c: p.pop("peak", None) for c, p in ledger["positions"].items()}   # peaks are recomputed every run
-    json.dump(ledger, open(LEDGER, "w", encoding="utf-8"), indent=1)
-    for c, pk in peaks.items():
-        ledger["positions"][c]["peak"] = pk
-    for name, val in page(ledger, px, now):
-        print("  %-26s $%s  %+.2f%%" % (name, format(val, ",.2f"), (val / START_CASH - 1) * 100))
+    print("Crypto check %s UTC, %d coins listed" % (stamp(now), len(prods)))
+    books, seen = [], {}
+    for trader in TRADERS:
+        path = trader["ledger"]
+        ledger = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else new_ledger(px)
+        print("%s: %d holding" % (trader["label"], len(ledger["positions"])))
+        check_exits(ledger, px, now, a.dry, print, trader["trades"])
+        check_entries(ledger, prods, px, now, a.dry, print, trader["trades"], trader["alive_only"], seen)
+        ledger["cooldown"] = {c: t for c, t in ledger["cooldown"].items() if t > now}
+        books.append((trader, ledger))
+        if a.dry:
+            continue
+        os.makedirs(STATE_DIR, exist_ok=True)
+        peaks = {c: p.pop("peak", None) for c, p in ledger["positions"].items()}   # peaks are recomputed every run
+        json.dump(ledger, open(path, "w", encoding="utf-8"), indent=1)
+        for c, pk in peaks.items():
+            ledger["positions"][c]["peak"] = pk
+        for name, val in scores(trader, ledger, px):
+            print("  %-40s $%s  %+.2f%%" % (name[:40], format(val, ",.2f"), (val / START_CASH - 1) * 100))
+    if not a.dry:
+        page(books, px, now)
 
 
 if __name__ == "__main__":
