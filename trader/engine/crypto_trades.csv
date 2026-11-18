@@ -15,3 +15,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-17 15:45,sell,ASTER-USD,0.5391,3247.252644,1741.84,trailing stop,-133.36,-7.11
 2026-11-18 00:07,buy,RENDER-USD,1.4866,1225.96876,1831.64,pump +8.3%,,
 2026-11-18 06:07,sell,INJ-USD,7.319,253.58628,1846.72,24 hours up,-31.05,-1.65
+2026-11-18 11:07,buy,ICNT-USD,0.3248,5497.569554,1794.54,pump +39.4%,,
