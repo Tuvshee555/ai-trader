@@ -1,6 +1,6 @@
 # Crypto day trader
 
-Paper money, $10,000 per trader. Updated 2026-11-18 15:07 UTC. Prices: Coinbase, live. Each trader is compared with holding Bitcoin and holding the meme coins that were alive, over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-18 16:07 UTC. Prices: Coinbase, live. Each trader is compared with holding Bitcoin and holding the meme coins that were alive, over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,485.28 | **-5.15%** |
-| Pump chaser, any coin | $9,133.52 | **-8.66%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,949.38 | **-10.51%** |
+| Just hold Bitcoin | $9,394.58 | **-6.05%** |
+| Pump chaser, any coin | $9,066.74 | **-9.33%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,874.90 | **-11.25%** |
 
 Closed trades: 8, winners: 1 (12%). Fees and spread paid: $166.60.
 
@@ -18,8 +18,8 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| RENDER-USD | 2026-11-18 00:07 | 1.4866 | 1.4252 | -5.1% | 1.33938 | 2026-11-19 00:07 |
-| ICNT-USD | 2026-11-18 11:07 | 0.3248 | 0.3411 | +4.0% | 0.31104 | 2026-11-19 11:07 |
+| RENDER-USD | 2026-11-18 00:07 | 1.4866 | 1.4075 | -6.3% | 1.33938 | 2026-11-19 00:07 |
+| ICNT-USD | 2026-11-18 11:07 | 0.3248 | 0.3329 | +1.5% | 0.31104 | 2026-11-19 11:07 |
 
 Last trades:
 
@@ -44,9 +44,9 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $9,990.05 | **-0.10%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,883.11 | **-1.17%** |
-| Just hold Bitcoin | $9,848.24 | **-1.52%** |
+| Pump chaser, alive coins only | $10,258.14 | **+2.58%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,815.28 | **-1.85%** |
+| Just hold Bitcoin | $9,754.07 | **-2.46%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $9.95.
 
@@ -54,7 +54,7 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| PEARL-USD | 2026-11-18 15:07 | 1.8914 | 1.8914 | -1.0% | 1.70226 | 2026-11-19 15:07 |
+| PEARL-USD | 2026-11-18 15:07 | 1.8914 | 2.1462 | +12.3% | 1.94301 | 2026-11-19 15:07 |
 
 Last trades:
 
