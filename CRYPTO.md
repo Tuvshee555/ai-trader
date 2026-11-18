@@ -1,23 +1,27 @@
 # Crypto day trader
 
-Paper money, $10,000 each, started 2026-11-14 07:20 UTC. Updated 2026-11-18 06:07 UTC. Prices: Coinbase, live.
+Paper money, $10,000 per trader. Updated 2026-11-18 10:07 UTC. Prices: Coinbase, live. Each trader is compared with holding Bitcoin and holding the meme coins that were alive, over its own dates.
+
+## Pump chaser, any coin
+
+Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one that was dead before.
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,644.76 | **-3.55%** |
-| Just hold 14 meme coins | $9,226.64 | **-7.73%** |
-| Meme-coin day trader | $9,093.69 | **-9.06%** |
+| Just hold Bitcoin | $9,631.45 | **-3.69%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $9,056.36 | **-9.44%** |
+| Pump chaser, any coin | $8,985.20 | **-10.15%** |
 
 Closed trades: 7, winners: 0 (0%). Fees and spread paid: $147.94.
 
-## Holding now
+Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| PEARL-USD | 2026-11-17 13:07 | 1.76 | 1.8422 | +3.6% | 1.69164 | 2026-11-18 13:07 |
-| RENDER-USD | 2026-11-18 00:07 | 1.4866 | 1.4435 | -3.9% | 1.33938 | 2026-11-19 00:07 |
+| PEARL-USD | 2026-11-17 13:07 | 1.76 | 1.7503 | -1.5% | 1.73655 | 2026-11-18 13:07 |
+| RENDER-USD | 2026-11-18 00:07 | 1.4866 | 1.4345 | -4.5% | 1.33938 | 2026-11-19 00:07 |
 
-## Last trades
+Last trades:
 
 | Time (UTC) | Side | Coin | Price | $ | Why | P&L |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -33,9 +37,21 @@ Closed trades: 7, winners: 0 (0%). Fees and spread paid: $147.94.
 | 2026-11-16 16:00 | buy | ICP-USD | 2.4584 | 1882.33 | pump +12.9% |  |
 | 2026-11-15 21:15 | sell | ASTER-USD | 0.6183 | 1771.38 | trailing stop (5-min recheck) | $-157.28 (-8.15%) |
 | 2026-11-15 21:07 | buy | ASTER-USD | 0.6665 | 1928.66 | pump +31.3% |  |
-| 2026-11-15 20:30 | sell | RARE-USD | 0.013374 | 1743.26 | trailing stop (5-min recheck) | $-213.16 (-10.90%) |
-| 2026-11-15 20:07 | buy | RARE-USD | 0.01486 | 1956.42 | pump +74.2% |  |
-| 2026-11-15 10:40 | sell | NCT-USD | 0.008955 | 1782.09 | trailing stop (5-min recheck) | $-217.91 (-10.90%) |
-| 2026-11-15 08:07 | buy | NCT-USD | 0.00995 | 2000.00 | pump +36.3% |  |
 
-Rules are in `engine/crypto.py`. Most people who day-trade meme coins lose money; this page shows whether this rulebook does too.
+## Pump chaser, alive coins only
+
+Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded at least $1M a day on average in the week before it.
+
+| Player | Value | Return |
+| --- | --- | --- |
+| Pump chaser, alive coins only | $10,000.00 | **+0.00%** |
+| Just hold Bitcoin | $10,000.00 | **+0.00%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $10,000.00 | **+0.00%** |
+
+Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
+
+Holding now:
+
+Nothing. Cash, waiting for a coin that pumps.
+
+Rules are in `engine/crypto.py`. Most people who day-trade meme coins lose money; this page shows whether these rulebooks do too.
