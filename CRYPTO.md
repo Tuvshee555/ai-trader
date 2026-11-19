@@ -1,6 +1,6 @@
 # Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-19 17:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-19 18:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,299.97 | **-7.00%** |
-| Pump chaser, any coin | $9,051.04 | **-9.49%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,823.00 | **-11.77%** |
+| Just hold Bitcoin | $9,351.49 | **-6.49%** |
+| Pump chaser, any coin | $9,158.44 | **-8.42%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,873.75 | **-11.26%** |
 
 Closed trades: 13, winners: 4 (31%). Fees and spread paid: $267.50.
 
@@ -18,9 +18,9 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.09771 | -8.3% | 0.095895 | 2026-11-20 07:07 |
-| SYRUP-USD | 2026-11-19 15:07 | 0.1076 | 0.0987 | -9.2% | 0.09684 | 2026-11-20 15:07 |
-| RAVE-USD | 2026-11-19 17:07 | 0.1168 | 0.1168 | -1.0% | 0.10512 | 2026-11-20 17:07 |
+| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.09984 | -6.3% | 0.095895 | 2026-11-20 07:07 |
+| SYRUP-USD | 2026-11-19 15:07 | 0.1076 | 0.0994 | -8.5% | 0.09684 | 2026-11-20 15:07 |
+| RAVE-USD | 2026-11-19 17:07 | 0.1168 | 0.1206 | +2.2% | 0.10971 | 2026-11-20 17:07 |
 
 Last trades:
 
@@ -45,9 +45,9 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $10,024.98 | **+0.25%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,696.36 | **-3.04%** |
-| Just hold Bitcoin | $9,655.84 | **-3.44%** |
+| Pump chaser, alive coins only | $10,065.91 | **+0.66%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,758.09 | **-2.42%** |
+| Just hold Bitcoin | $9,709.33 | **-2.91%** |
 
 Closed trades: 1, winners: 1 (100%). Fees and spread paid: $31.06.
 
@@ -55,7 +55,7 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.09771 | -8.3% | 0.095895 | 2026-11-20 07:07 |
+| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.09984 | -6.3% | 0.095895 | 2026-11-20 07:07 |
 
 Last trades:
 
@@ -72,8 +72,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 | Player | Value | Return |
 | --- | --- | --- |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
-| Just hold Bitcoin | $9,805.40 | **-1.95%** |
-| Just hold half Bitcoin, half Ethereum | $9,770.66 | **-2.29%** |
+| Just hold Bitcoin | $9,859.71 | **-1.40%** |
+| Just hold half Bitcoin, half Ethereum | $9,844.92 | **-1.55%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
 
