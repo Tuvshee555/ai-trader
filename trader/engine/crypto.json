@@ -3,19 +3,13 @@
   "t": 1794640856.2246451,
   "cash": 10000.0
  },
- "cash": 3858.7257397785297,
+ "cash": 5527.532104894271,
  "positions": {
   "USELESS-USD": {
    "qty": 17192.843952924606,
    "entry": 0.10548,
    "t": 1795072035.876953,
    "cost": 1822.5686860552596
-  },
-  "SYRUP-USD": {
-   "qty": 17319.210313398267,
-   "entry": 0.1076,
-   "t": 1795100835.6646297,
-   "cost": 1872.8647648702618
   },
   "RAVE-USD": {
    "qty": 15436.610995432093,
@@ -29,7 +23,8 @@
   "IRYS-USD": 1795139700.0,
   "PROS-USD": 1795141200.0,
   "SENT-USD": 1795147800.0,
-  "ICNT-USD": 1795174500.0
+  "ICNT-USD": 1795174500.0,
+  "SYRUP-USD": 1795207500.0
  },
  "bench": {
   "btc": {
@@ -44,8 +39,8 @@
   "memes_rule": "meme coins with >= $1M/day average in the 7 days before the start; rebuilt 2026-11-18 at start prices"
  },
  "stats": {
-  "trades": 13,
+  "trades": 14,
   "wins": 4,
-  "fees": 267.4965866690687
+  "fees": 275.88254830281613
  }
 }
