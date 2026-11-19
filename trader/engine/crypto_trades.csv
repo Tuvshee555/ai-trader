@@ -23,3 +23,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-19 01:55,sell,IRYS-USD,0.023463,82361.02021,1922.77,trailing stop,110.88,6.12
 2026-11-19 02:20,sell,PROS-USD,0.64206,2621.494543,1674.74,trailing stop,-130.49,-7.23
 2026-11-19 03:07,buy,SENT-USD,0.02236,79900.84313,1795.52,pump +19.4%,,
+2026-11-19 04:10,sell,SENT-USD,0.023076,79900.84313,1834.57,trailing stop,39.06,2.18

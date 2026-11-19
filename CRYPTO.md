@@ -1,6 +1,6 @@
 # Crypto day trader
 
-Paper money, $10,000 per trader. Updated 2026-11-19 03:07 UTC. Prices: Coinbase, live. Each trader is compared with holding Bitcoin and holding the meme coins that were alive, over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-19 05:07 UTC. Prices: Coinbase, live. Each trader is compared with holding Bitcoin and holding the meme coins that were alive, over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,23 +8,23 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,322.57 | **-6.77%** |
-| Pump chaser, any coin | $8,968.65 | **-10.31%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,867.11 | **-11.33%** |
+| Just hold Bitcoin | $9,480.65 | **-5.19%** |
+| Pump chaser, any coin | $9,080.41 | **-9.20%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $9,025.23 | **-9.75%** |
 
-Closed trades: 11, winners: 2 (18%). Fees and spread paid: $220.10.
+Closed trades: 12, winners: 3 (25%). Fees and spread paid: $229.32.
 
 Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| ICNT-USD | 2026-11-18 11:07 | 0.3248 | 0.3265 | -0.5% | 0.31104 | 2026-11-19 11:07 |
-| SENT-USD | 2026-11-19 03:07 | 0.02236 | 0.02236 | -1.0% | 0.020124 | 2026-11-20 03:07 |
+| ICNT-USD | 2026-11-18 11:07 | 0.3248 | 0.3381 | +3.1% | 0.31104 | 2026-11-19 11:07 |
 
 Last trades:
 
 | Time (UTC) | Side | Coin | Price | $ | Why | P&L |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-19 04:10 | sell | SENT-USD | 0.023076 | 1834.57 | trailing stop | $39.06 (2.18%) |
 | 2026-11-19 03:07 | buy | SENT-USD | 0.02236 | 1795.52 | pump +19.4% |  |
 | 2026-11-19 02:20 | sell | PROS-USD | 0.64206 | 1674.74 | trailing stop | $-130.49 (-7.23%) |
 | 2026-11-19 01:55 | sell | IRYS-USD | 0.023463 | 1922.77 | trailing stop | $110.88 (6.12%) |
@@ -36,7 +36,6 @@ Last trades:
 | 2026-11-18 06:07 | sell | INJ-USD | 7.319 | 1846.72 | 24 hours up | $-31.05 (-1.65%) |
 | 2026-11-18 00:07 | buy | RENDER-USD | 1.4866 | 1831.64 | pump +8.3% |  |
 | 2026-11-17 15:45 | sell | ASTER-USD | 0.5391 | 1741.84 | trailing stop | $-133.36 (-7.11%) |
-| 2026-11-17 14:30 | sell | ICP-USD | 2.30733 | 1749.08 | trailing stop | $-133.25 (-7.08%) |
 
 ## Pump chaser, alive coins only
 
@@ -45,8 +44,8 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 | Player | Value | Return |
 | --- | --- | --- |
 | Pump chaser, alive coins only | $10,184.41 | **+1.84%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,769.97 | **-2.30%** |
-| Just hold Bitcoin | $9,679.31 | **-3.21%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,941.54 | **-0.58%** |
+| Just hold Bitcoin | $9,843.43 | **-1.57%** |
 
 Closed trades: 1, winners: 1 (100%). Fees and spread paid: $20.93.
 
