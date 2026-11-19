@@ -1,6 +1,6 @@
 # Crypto day trader
 
-Paper money, $10,000 per trader. Updated 2026-11-19 00:07 UTC. Prices: Coinbase, live. Each trader is compared with holding Bitcoin and holding the meme coins that were alive, over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-19 00:08 UTC. Prices: Coinbase, live. Each trader is compared with holding Bitcoin and holding the meme coins that were alive, over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,370.56 | **-6.29%** |
-| Pump chaser, any coin | $8,950.64 | **-10.49%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,885.19 | **-11.15%** |
+| Just hold Bitcoin | $9,360.79 | **-6.39%** |
+| Pump chaser, any coin | $8,945.85 | **-10.54%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,890.97 | **-11.09%** |
 
 Closed trades: 9, winners: 1 (11%). Fees and spread paid: $184.08.
 
@@ -18,8 +18,8 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| ICNT-USD | 2026-11-18 11:07 | 0.3248 | 0.3334 | +1.6% | 0.31104 | 2026-11-19 11:07 |
-| PROS-USD | 2026-11-18 20:07 | 0.6852 | 0.6564 | -5.2% | 0.63 | 2026-11-19 20:07 |
+| ICNT-USD | 2026-11-18 11:07 | 0.3248 | 0.3331 | +1.5% | 0.31104 | 2026-11-19 11:07 |
+| PROS-USD | 2026-11-18 20:07 | 0.6852 | 0.6552 | -5.3% | 0.63 | 2026-11-19 20:07 |
 
 Last trades:
 
@@ -45,8 +45,8 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 | Player | Value | Return |
 | --- | --- | --- |
 | Pump chaser, alive coins only | $10,184.41 | **+1.84%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,808.68 | **-1.91%** |
-| Just hold Bitcoin | $9,729.13 | **-2.71%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,812.28 | **-1.88%** |
+| Just hold Bitcoin | $9,718.98 | **-2.81%** |
 
 Closed trades: 1, winners: 1 (100%). Fees and spread paid: $20.93.
 
