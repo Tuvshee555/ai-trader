@@ -3,14 +3,8 @@
   "t": 1794640856.2246451,
   "cash": 10000.0
  },
- "cash": 3705.819410072932,
+ "cash": 5397.004083366195,
  "positions": {
-  "RENDER-USD": {
-   "qty": 1225.9687599083582,
-   "entry": 1.4866,
-   "t": 1794960439.9857047,
-   "cost": 1831.6377842721636
-  },
   "ICNT-USD": {
    "qty": 5497.569553590786,
    "entry": 0.3248,
@@ -26,7 +20,8 @@
  },
  "cooldown": {
   "INJ-USD": 1795068435.202923,
-  "PEARL-USD": 1795097236.767773
+  "PEARL-USD": 1795097236.767773,
+  "RENDER-USD": 1795133243.3090708
  },
  "bench": {
   "btc": {
@@ -41,8 +36,8 @@
   "memes_rule": "meme coins with >= $1M/day average in the 7 days before the start; rebuilt 2026-11-18 at start prices"
  },
  "stats": {
-  "trades": 8,
+  "trades": 9,
   "wins": 1,
-  "fees": 175.5773592953164
+  "fees": 184.07577473900113
  }
 }
