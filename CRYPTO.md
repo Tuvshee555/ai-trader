@@ -1,6 +1,6 @@
 # Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-19 12:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-19 15:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,22 +8,24 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,518.64 | **-4.81%** |
-| Pump chaser, any coin | $9,324.78 | **-6.75%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $9,124.69 | **-8.75%** |
+| Just hold Bitcoin | $9,510.93 | **-4.89%** |
+| Pump chaser, any coin | $9,355.01 | **-6.45%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $9,113.00 | **-8.87%** |
 
-Closed trades: 13, winners: 4 (31%). Fees and spread paid: $249.16.
+Closed trades: 13, winners: 4 (31%). Fees and spread paid: $258.48.
 
 Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.1036 | -2.8% | 0.095895 | 2026-11-20 07:07 |
+| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.1059 | -0.6% | 0.095895 | 2026-11-20 07:07 |
+| SYRUP-USD | 2026-11-19 15:07 | 0.1076 | 0.1076 | -1.0% | 0.09684 | 2026-11-20 15:07 |
 
 Last trades:
 
 | Time (UTC) | Side | Coin | Price | $ | Why | P&L |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-19 15:07 | buy | SYRUP-USD | 0.1076 | 1872.86 | pump +10.9% |  |
 | 2026-11-19 11:35 | sell | ICNT-USD | 0.39204 | 2144.49 | trailing stop | $349.95 (19.50%) |
 | 2026-11-19 07:07 | buy | USELESS-USD | 0.10548 | 1822.57 | pump +10.5% |  |
 | 2026-11-19 04:10 | sell | SENT-USD | 0.023076 | 1834.57 | trailing stop | $39.06 (2.18%) |
@@ -35,7 +37,6 @@ Last trades:
 | 2026-11-18 20:07 | buy | PROS-USD | 0.6852 | 1805.23 | pump +36.9% |  |
 | 2026-11-18 14:07 | sell | PEARL-USD | 1.834 | 1935.15 | 24 hours up | $59.42 (3.17%) |
 | 2026-11-18 11:07 | buy | ICNT-USD | 0.3248 | 1794.54 | pump +39.4% |  |
-| 2026-11-18 06:07 | sell | INJ-USD | 7.319 | 1846.72 | 24 hours up | $-31.05 (-1.65%) |
 
 ## Pump chaser, alive coins only
 
@@ -43,9 +44,9 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $10,138.15 | **+1.38%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $10,073.74 | **+0.74%** |
-| Just hold Bitcoin | $9,882.88 | **-1.17%** |
+| Pump chaser, alive coins only | $10,182.35 | **+1.82%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $10,040.58 | **+0.41%** |
+| Just hold Bitcoin | $9,874.87 | **-1.25%** |
 
 Closed trades: 1, winners: 1 (100%). Fees and spread paid: $31.06.
 
@@ -53,7 +54,7 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.1036 | -2.8% | 0.095895 | 2026-11-20 07:07 |
+| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.1059 | -0.6% | 0.095895 | 2026-11-20 07:07 |
 
 Last trades:
 
@@ -69,8 +70,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $10,035.95 | **+0.36%** |
-| Just hold half Bitcoin, half Ethereum | $10,025.39 | **+0.25%** |
+| Just hold half Bitcoin, half Ethereum | $10,036.21 | **+0.36%** |
+| Just hold Bitcoin | $10,027.82 | **+0.28%** |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.

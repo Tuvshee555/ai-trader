@@ -26,3 +26,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-19 04:10,sell,SENT-USD,0.023076,79900.84313,1834.57,trailing stop,39.06,2.18
 2026-11-19 07:07,buy,USELESS-USD,0.10548,17192.84395,1822.57,pump +10.5%,,
 2026-11-19 11:35,sell,ICNT-USD,0.39204,5497.569554,2144.49,trailing stop,349.95,19.50
+2026-11-19 15:07,buy,SYRUP-USD,0.1076,17319.21031,1872.86,pump +10.9%,,
