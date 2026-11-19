@@ -1,6 +1,6 @@
-# Crypto day trader
+# Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-19 07:07 UTC. Prices: Coinbase, live. Each trader is compared with holding Bitcoin and holding the meme coins that were alive, over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-19 07:44 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,518.06 | **-4.82%** |
-| Pump chaser, any coin | $9,103.78 | **-8.96%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $9,091.80 | **-9.08%** |
+| Just hold Bitcoin | $9,484.55 | **-5.15%** |
+| Pump chaser, any coin | $9,144.77 | **-8.55%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $9,043.95 | **-9.56%** |
 
 Closed trades: 12, winners: 3 (25%). Fees and spread paid: $238.39.
 
@@ -18,8 +18,8 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| ICNT-USD | 2026-11-18 11:07 | 0.3248 | 0.344 | +4.9% | 0.31779 | 2026-11-19 11:07 |
-| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.10548 | -1.0% | 0.094932 | 2026-11-20 07:07 |
+| ICNT-USD | 2026-11-18 11:07 | 0.3248 | 0.3518 | +7.2% | 0.32031 | 2026-11-19 11:07 |
+| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.10537 | -1.1% | 0.095895 | 2026-11-20 07:07 |
 
 Last trades:
 
@@ -44,9 +44,9 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $10,174.28 | **+1.74%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $10,007.13 | **+0.07%** |
-| Just hold Bitcoin | $9,882.28 | **-1.18%** |
+| Pump chaser, alive coins only | $10,172.16 | **+1.72%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,953.65 | **-0.46%** |
+| Just hold Bitcoin | $9,847.48 | **-1.53%** |
 
 Closed trades: 1, winners: 1 (100%). Fees and spread paid: $31.06.
 
@@ -54,7 +54,7 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.10548 | -1.0% | 0.094932 | 2026-11-20 07:07 |
+| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.10537 | -1.1% | 0.095895 | 2026-11-20 07:07 |
 
 Last trades:
 
@@ -63,5 +63,25 @@ Last trades:
 | 2026-11-19 07:07 | buy | USELESS-USD | 0.10548 | 2036.88 | pump +10.5% |  |
 | 2026-11-18 17:05 | sell | PEARL-USD | 2.08656 | 2184.41 | trailing stop | $184.41 (9.22%) |
 | 2026-11-18 15:07 | buy | PEARL-USD | 1.8914 | 2000.00 | pump +8.0% |  |
+
+## Trend: Bitcoin + Ethereum
+
+Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most half the book each: a quarter of that half for every one of the coin's 20, 50, 100 and 200-day averages it closed above yesterday, cash for the rest.
+
+| Player | Value | Return |
+| --- | --- | --- |
+| Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
+| Just hold Bitcoin | $10,000.00 | **+0.00%** |
+| Just hold half Bitcoin, half Ethereum | $10,000.00 | **+0.00%** |
+
+Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
+
+Holding now:
+
+| Coin | Share of book | Target | Value | P&L |
+| --- | --- | --- | --- | --- |
+| BTC-USD | 0% | 0.0% | $0.00 |  |
+| ETH-USD | 0% | 0.0% | $0.00 |  |
+| cash | 100% | | $10,000.00 | |
 
 Rules are in `engine/crypto.py`. Most people who day-trade meme coins lose money; this page shows whether these rulebooks do too.
