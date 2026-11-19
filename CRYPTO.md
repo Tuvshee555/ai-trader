@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,351.49 | **-6.49%** |
+| Just hold Bitcoin | $9,348.06 | **-6.52%** |
 | Pump chaser, any coin | $9,158.44 | **-8.42%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,873.75 | **-11.26%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,865.93 | **-11.34%** |
 
 Closed trades: 13, winners: 4 (31%). Fees and spread paid: $267.50.
 
@@ -46,8 +46,8 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 | Player | Value | Return |
 | --- | --- | --- |
 | Pump chaser, alive coins only | $10,065.91 | **+0.66%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,758.09 | **-2.42%** |
-| Just hold Bitcoin | $9,709.33 | **-2.91%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,751.21 | **-2.49%** |
+| Just hold Bitcoin | $9,705.77 | **-2.94%** |
 
 Closed trades: 1, winners: 1 (100%). Fees and spread paid: $31.06.
 
@@ -72,8 +72,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 | Player | Value | Return |
 | --- | --- | --- |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
-| Just hold Bitcoin | $9,859.71 | **-1.40%** |
-| Just hold half Bitcoin, half Ethereum | $9,844.92 | **-1.55%** |
+| Just hold Bitcoin | $9,856.10 | **-1.44%** |
+| Just hold half Bitcoin, half Ethereum | $9,841.28 | **-1.59%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
 
