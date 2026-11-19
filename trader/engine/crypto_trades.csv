@@ -19,3 +19,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-18 14:07,sell,PEARL-USD,1.834,1060.457339,1935.15,24 hours up,59.42,3.17
 2026-11-18 20:07,buy,PROS-USD,0.6852,2621.494543,1805.23,pump +36.9%,,
 2026-11-19 00:07,sell,RENDER-USD,1.3864,1225.96876,1691.18,24 hours up,-140.45,-7.67
+2026-11-19 01:07,buy,IRYS-USD,0.02189,82361.02021,1811.90,pump +49.5%,,
