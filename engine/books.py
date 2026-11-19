@@ -14,6 +14,16 @@ Players besides the engine:
              held until a newer filing replaces the file
   ai         Claude picks weekly from prices and headlines (ai_pick.py)
   equal      the fair bar: every stock in the universe equally, monthly
+  mom3       bold: only the 3 strongest stocks by momentum, equally, weekly
+  tqqq       bold: TQQQ (3x the Nasdaq-100, daily) while QQQ is above its
+             200-day average, T-bills (BIL) when it is below; checked daily
+
+The two bold players were added on 2026-11-18 after a backtest (2017-2026, next-open fills,
+0.10% cost): top-3 momentum 44.7%/yr, worst drop -40%, but only 17.4%/yr against 14.8% for
+equal weight once NVDA, TSLA, PLTR, AMD, AVGO and NFLX are taken out of the list, so most of
+that is hindsight in today's universe. TQQQ-in-uptrends 32.8%/yr, worst drop -59%, against
+QQQ 19.6%/yr, -35% (the Nasdaq was itself the decade's winner). mom3 starts at the engine's
+first open like the other mechanical players; tqqq starts at its first live run.
 
 Each book is compared with SPY over its own dates. After about three months
 the losers are dropped and the winner gets the money.
@@ -25,7 +35,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT, STATE_DIR, align, latest_prices  # noqa: E402
-from strategy import BENCH, UNIVERSE, features, targets  # noqa: E402
+from strategy import BENCH, EXTRA, UNIVERSE, features, targets  # noqa: E402
 
 COST = 0.001
 INVEST = 0.94          # same share of the book the engine invests
@@ -40,6 +50,10 @@ PLAYERS = {
     "copycat": {"label": "Copy Berkshire 13F", "every": None, "backfill": True},
     "ai": {"label": "AI judgement (Claude)", "every": 5, "backfill": False},
     "equal": {"label": "All 100 equally (fair bar)", "every": 21, "backfill": True},
+    "mom3": {"label": "Momentum top 3 (bold)", "every": 5, "backfill": True},
+    # Not backfilled: QQQ crossed its 200-day average on 11-13, and a start filled at the engine's
+    # first open cannot replay the daily switch that followed. It starts at its first live run.
+    "tqqq": {"label": "3x Nasdaq in uptrends (bold)", "every": 1, "backfill": False},
 }
 
 
@@ -92,6 +106,26 @@ def equal_targets(closes, i):
     return {s: 1.0 / len(names) for s in names}
 
 
+def stocks_only(closes):
+    """targets() ranks every symbol it is given, so the ETFs in EXTRA are kept away from it."""
+    keep = set(UNIVERSE) | {BENCH}
+    return {s: c for s, c in closes.items() if s in keep}
+
+
+def mom3_targets(closes, i):
+    feats = {s: features(closes[s], i) for s in UNIVERSE if s in closes}
+    feats = {s: f for s, f in feats.items() if f}
+    top = sorted(feats, key=lambda s: -feats[s]["momentum"])[:3]
+    return {s: 1.0 / len(top) for s in top}
+
+
+def tqqq_targets(closes, i):
+    q = closes.get("QQQ")
+    if not q or i < 199 or None in q[i - 199:i + 1]:
+        return None
+    return {"TQQQ": 1.0} if q[i] > sum(q[i - 199:i + 1]) / 200.0 else {"BIL": 1.0}
+
+
 def decide(name, book, closes, i, dates, session, allow_ai, px_now):
     """(weights, note) when the player wants to trade now, else (None, reason)."""
     every = PLAYERS[name]["every"]
@@ -108,9 +142,19 @@ def decide(name, book, closes, i, dates, session, allow_ai, px_now):
         return None, "not due"
     held = list((book or {}).get("shares", {}))
     if name == "momentum":
-        return targets(closes, i, held=[s for s in held if s in closes], weights={"momentum": 1.0})[0], "weekly"
+        return targets(stocks_only(closes), i, held=[s for s in held if s in closes],
+                       weights={"momentum": 1.0})[0], "weekly"
     if name == "equal":
         return equal_targets(closes, i), "monthly"
+    if name == "mom3":
+        return mom3_targets(closes, i), "weekly, the 3 strongest"
+    if name == "tqqq":
+        w = tqqq_targets(closes, i)
+        if not w:
+            return None, "no QQQ history"
+        if book is not None and set(book["shares"]) == set(w):
+            return None, "holding"
+        return w, "QQQ %s its 200-day average" % ("above" if "TQQQ" in w else "below")
     if name == "ai":
         import ai_pick
         cur = weights_of(book, px_now) if book else {}
@@ -121,8 +165,9 @@ def decide(name, book, closes, i, dates, session, allow_ai, px_now):
     return None, "unknown player"
 
 
-def backfill(doc, bars, engine_start):
-    """Start the mechanical players at the engine's first session, filled at that day's open."""
+def backfill(doc, bars, engine_start, dry=False):
+    """Start the mechanical players at the engine's first session, filled at that day's open.
+    A dry run starts them in memory only and logs nothing."""
     if not engine_start:
         return
     dates_all, opens_all, _ = align(bars, BENCH)
@@ -147,7 +192,8 @@ def backfill(doc, bars, engine_start):
         if name == "copycat":
             book["filed"] = copycat_targets()[1]
         doc["books"][name] = book
-        _log("tournament_start", player=name, session=engine_start, filled_at="open", targets=w, note=note)
+        if not dry:
+            _log("tournament_start", player=name, session=engine_start, filled_at="open", targets=w, note=note)
         print("  %s starts %s at that day's open" % (PLAYERS[name]["label"], engine_start))
 
 
@@ -156,7 +202,7 @@ def step(session, bars, dry=False, engine=None, allow_ai=True):
     doc = _read(BOOKS, {"books": {}})
     if doc.get("last_session") == session and not dry:
         return
-    backfill(doc, bars, (engine or {}).get("start_session"))
+    backfill(doc, bars, (engine or {}).get("start_session"), dry)
     dates, _o, closes = align(bars, BENCH, before=session)
     i = len(dates) - 1
     books = doc["books"]
@@ -165,7 +211,7 @@ def step(session, bars, dry=False, engine=None, allow_ai=True):
     for b in books.values():
         held |= set(b["shares"])
     fallback = {s: closes[s][i] for s in closes if closes[s][i]}
-    px = latest_prices(sorted(held | set(UNIVERSE)), fallback)
+    px = latest_prices(sorted(held | set(UNIVERSE) | set(EXTRA)), fallback)
 
     print("Tournament, session %s:" % session)
     for name, p in PLAYERS.items():
@@ -228,7 +274,7 @@ def scoreboard(rows, session):
                 for p in picks["picks"]]
         out.append("| cash | %.0f%% | |" % (picks.get("cash", 0) * 100))
     out += ["", "One month is mostly luck: a lead of a point or two proves nothing. See README.md for how it works.",
-            "", "Crypto: the meme-coin day trader has its own page, [CRYPTO.md](CRYPTO.md), checked every hour."]
+            "", "Crypto: the three crypto traders have their own page, [CRYPTO.md](CRYPTO.md), checked every hour."]
     with open(os.path.join(ROOT, "SCOREBOARD.md"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(out) + "\n")
 

@@ -17,7 +17,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import PAPER, ROOT, STATE_DIR, align, call, latest_prices, load_bars  # noqa: E402
-from strategy import BENCH, PARAMS, UNIVERSE, targets  # noqa: E402
+from strategy import BENCH, EXTRA, PARAMS, UNIVERSE, targets  # noqa: E402
 
 STATE = os.path.join(STATE_DIR, "state.json")
 LOG = os.path.join(STATE_DIR, "log.jsonl")
@@ -93,12 +93,13 @@ def main():
         print("Already ran for the %s session." % session)
         books_doc = read(os.path.join(STATE_DIR, "books.json"), {})
         if state.get("start") and books_doc.get("last_session") != session:   # retry a failed tournament step
-            if not tournament(session, load_bars(UNIVERSE + [BENCH]), False, engine_score(state, acct)):
+            if not tournament(session, load_bars(UNIVERSE + [BENCH] + EXTRA), False, engine_score(state, acct)):
                 sys.exit("The tournament step failed again (the engine itself is fine). See trader/engine/log.jsonl.")
         return
 
-    bars = load_bars(UNIVERSE + [BENCH])
-    dates, _opens, closes = align(bars, BENCH, before=session)
+    bars = load_bars(UNIVERSE + [BENCH] + EXTRA)   # EXTRA is for the tournament only
+    mine = set(UNIVERSE) | {BENCH}
+    dates, _opens, closes = align({s: b for s, b in bars.items() if s in mine}, BENCH, before=session)
     i = len(dates) - 1
     equity = float(acct["equity"])
     budget = float(cfg.get("budget") or 0)

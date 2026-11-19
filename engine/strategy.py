@@ -16,6 +16,10 @@ HON IBM INTC INTU ISRG JNJ JPM KO LIN LLY LMT LOW MA MCD MDLZ MDT MET META MMM M
 NFLX NKE NOW NVDA ORCL PEP PFE PG PLTR PM PYPL QCOM RTX SBUX SCHW SO SPG T TGT TMO TMUS TSLA TXN
 UNH UNP UPS USB V VZ WFC WMT XOM""".split()
 
+# Funds only the tournament's TQQQ player trades (books.py). The engine never sees them:
+# run.py hands the engine UNIVERSE + BENCH only.
+EXTRA = ["QQQ", "TQQQ", "BIL"]
+
 PARAMS = {
     "top_n": 10,               # stocks held
     "keep_rank": 20,           # a holding stays until it drops below this rank

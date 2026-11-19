@@ -2,11 +2,15 @@
 
 An experiment: can a rules-based engine beat simply holding the S&P 500? It trades **fake money** on an Alpaca paper account. Nothing here can reach a live account: the trading URL is hard-coded to Alpaca's paper endpoint.
 
-**The live score is in [SCOREBOARD.md](SCOREBOARD.md)**, updated after every market day. The crypto day trader is on **[CRYPTO.md](CRYPTO.md)**.
+**The live score is in [SCOREBOARD.md](SCOREBOARD.md)**, updated after every market day. The crypto traders are on **[CRYPTO.md](CRYPTO.md)**.
 
-## Crypto day trader
+## Crypto traders
 
 `engine/crypto.py` runs every hour in the cloud (`.github/workflows/crypto.yml`), all week. It is a $10,000 paper ledger priced from Coinbase's free live data, and it does not touch the Alpaca account. It scans every USD coin with at least $1M traded in 24 hours and buys the ones pumping: up 8% or more in 24 hours, breaking above the last 6 hours' high on at least twice the usual volume. It holds up to 5 coins at 20% of the book each and sells 10% below the peak since buying, or after 24 hours. The stop is checked on 5-minute prices, like a stop order resting at the exchange. Until 2026-11-16 it used hourly prices and skipped the hour of the buy. That recorded ASTER at -22.8% instead of -8.2%, so the first three trades were re-checked on 5-minute prices and the ledger was corrected (+$283). Every buy and sell pays 0.5% for fees and spread. It is compared with just holding Bitcoin and just holding the meme coins that were alive (at least $1M a day on average in the week before the start; on 2026-11-14 that was DOGE, PEPE, TRUMP and FARTCOIN) over the same dates. Until 2026-11-18 the basket held 14 meme coins, and on Coinbase most of them were dead, trading as little as $50k a day. A second trader with the same rules started on 2026-11-18. It buys a pump only if the coin traded at least $1M a day on average in the week before it, because the first trader kept buying dead coins' one-off pumps: RARE traded $70k a day before its +74% pump. The rules were fixed before the first run.
+
+A replay on Coinbase hourly prices for all 398 USD coins, 2026-05-31 to 2026-11-18, says pump chasing is a losing idea, not a badly tuned one. The replay bought the same coins at the same hours as the live trader did over 11-14 to 11-18 and ended within $20 of it. Over the whole 171 days the first trader would have lost 97.5% (808 trades, 31% winners, an average trade -2.3%) and the alive-only one 91.2%. Six other settings (20% trail, 20% trail with a 72-hour hold, 5% trail, 6-hour hold, +4% or +20% pumps) all lost 91% to 98%, and requiring $5M a day of past trading still lost 56.5%. Holding Bitcoin lost 13%. Both traders keep running to the verdict as agreed, so the live record can confirm it. Buying winners or losers of the week lost too (-24% to -85%). Buying alive coins after a 15% fall made +8.1% with one setting, but 11 of its 12 neighbouring settings lost money, so that was luck and it was not added.
+
+A third trader, **Trend: Bitcoin + Ethereum** (added 2026-11-18), is not a day trader. Each coin gets at most half the book: a quarter of that half for every one of its 20, 50, 100 and 200-day averages it closed above on the last finished UTC day, cash for the rest. On Coinbase daily prices from mid-2018 to 2026-11, with the same 0.5% cost, it made 34% a year with a worst drop of -53%, against 29% a year and -77% for holding Bitcoin; in 2022 it lost 33% while Bitcoin lost 64%. All four averages are used because any single one is a lucky pick: Bitcoin above its 20-day average alone made 6% a year, above its 50-day 42%. It is compared with holding Bitcoin and holding half Bitcoin, half Ethereum.
 
 ## What runs
 
@@ -36,6 +40,10 @@ The engine competes with other players, each with its own $40,000, on one scoreb
 | Copy Berkshire 13F | Berkshire Hathaway's top 5 (`trader/targets.json`) | when a new filing replaces the file |
 | AI judgement | Claude reads prices and headlines and picks 5 to 15 stocks (`engine/ai_pick.py`) | weekly |
 | All 100 equally | the fair bar | monthly |
+| Momentum top 3 (bold) | only the 3 strongest stocks by momentum, equally | weekly |
+| 3x Nasdaq in uptrends (bold) | TQQQ while QQQ is above its 200-day average, T-bills (BIL) below it | checked daily |
+
+The two bold players were added on 2026-11-18 to go for more money. In the backtest (2017 to 2026) top-3 momentum made 44.7% a year with a worst drop of -40%. Most of that is hindsight: with NVDA, TSLA, PLTR, AMD, AVGO and NFLX taken out of the list it made 17.4% a year, against 14.8% for holding the rest equally. TQQQ-in-uptrends made 32.8% a year with a worst drop of -59%, against 19.6% and -35% for holding QQQ; the Nasdaq was itself the decade's winner, which flatters it. Momentum top 3 started at the engine's first open like the other mechanical players. The TQQQ player started at its first live run (2026-11-18), because QQQ crossed its 200-day average on 2026-11-13 and a filled-at-the-first-open start could not replay that switch.
 
 Every book is compared with SPY over its own dates. Only the engine sends orders to Alpaca. The others are shadow books in `trader/engine/books.json`, filled at the price when the daily run happens with the same 0.10% cost. The mechanical players started at the engine's first session, filled at that day's open. The AI player started at its first pick. The verdict is on 2026-12-14: the losers are dropped and the winner gets the money. One month is short, so a small lead then is mostly luck.
 

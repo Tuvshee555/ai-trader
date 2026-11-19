@@ -29,6 +29,16 @@ Benchmarks over each trader's own dates: just holding Bitcoin, and just holding
 the meme coins that were alive (at least $1M a day on average in the week before
 the start). If a trader cannot beat holding the same kind of coins, the trading
 itself adds nothing.
+
+A third trader (added 2026-11-18) is not a day trader: it follows the trend of
+Bitcoin and Ethereum. Each coin gets at most half the book: a quarter of that half
+for every one of its 20, 50, 100 and 200-day averages it closed above on the last
+finished UTC day, cash for the rest. It trades when its target moves by at least
+5% of the book. Using all four averages instead of the one that tested best avoids
+picking a lucky number: on Coinbase daily prices from mid-2018 to 2026-11, with the
+same 0.5% cost, it made 34%/yr with a worst drop of -53%, against 29%/yr and -77%
+for holding Bitcoin. In the 2022 crash it lost 33% while Bitcoin lost 64%.
+Benchmarks: just holding Bitcoin, and just holding half Bitcoin, half Ethereum.
 """
 import argparse
 import datetime
@@ -71,10 +81,15 @@ ALIVE_DAYS = 7          # "alive" = at least MIN_VOLUME a day on average over th
 # honest. The meme basket that both are compared with holds only meme coins alive by the same
 # test, so dead coins do not drag it down.
 TRADERS = [
-    {"label": "Pump chaser, any coin", "ledger": LEDGER, "trades": TRADES, "alive_only": False},
-    {"label": "Pump chaser, alive coins only", "ledger": os.path.join(STATE_DIR, "crypto_alive.json"),
+    {"label": "Pump chaser, any coin", "kind": "pump", "ledger": LEDGER, "trades": TRADES, "alive_only": False},
+    {"label": "Pump chaser, alive coins only", "kind": "pump", "ledger": os.path.join(STATE_DIR, "crypto_alive.json"),
      "trades": os.path.join(STATE_DIR, "crypto_alive_trades.csv"), "alive_only": True},
+    {"label": "Trend: Bitcoin + Ethereum", "kind": "trend", "ledger": os.path.join(STATE_DIR, "crypto_trend.json"),
+     "trades": os.path.join(STATE_DIR, "crypto_trend_trades.csv"), "alive_only": False},
 ]
+TREND_COINS = ["BTC-USD", "ETH-USD"]
+TREND_DAYS = (20, 50, 100, 200)
+TREND_BAND = 0.05       # a move in the target smaller than 5% of the book is not worth the fees
 
 
 def get(path):
@@ -100,7 +115,7 @@ def products():
     return out
 
 
-STEP = {"ONE_HOUR": 3600, "FIVE_MINUTE": 300}
+STEP = {"ONE_HOUR": 3600, "FIVE_MINUTE": 300, "ONE_DAY": 86400}
 
 
 def candles(pid, since, granularity="ONE_HOUR"):
@@ -151,13 +166,16 @@ def record(path, row):
             "" if row.get("pnl_pct") is None else "%.2f" % row["pnl_pct"]))
 
 
-def new_ledger(px):
+def new_ledger(px, kind="pump"):
     t = time.time()
-    memes = alive_memes(px, t) or [m + "-USD" for m in MEMES if m + "-USD" in px]
+    bench = {"btc": {"BTC-USD": START_CASH / px["BTC-USD"]}}
+    if kind == "trend":
+        bench["pair"] = {c: START_CASH / len(TREND_COINS) / px[c] for c in TREND_COINS}
+    else:
+        memes = alive_memes(px, t) or [m + "-USD" for m in MEMES if m + "-USD" in px]
+        bench["memes"] = {m: START_CASH / len(memes) / px[m] for m in memes}
     return {"start": {"t": t, "cash": START_CASH},
-            "cash": START_CASH, "positions": {}, "cooldown": {},
-            "bench": {"btc": {"BTC-USD": START_CASH / px["BTC-USD"]},
-                      "memes": {m: START_CASH / len(memes) / px[m] for m in memes}},
+            "cash": START_CASH, "positions": {}, "cooldown": {}, "bench": bench,
             "stats": {"trades": 0, "wins": 0, "fees": 0.0}}
 
 
@@ -269,19 +287,101 @@ def check_entries(ledger, prods, px, now, dry, out, trades, alive_only, seen):
         out("  looked at: " + ", ".join(looked))
 
 
+def daily_closes(pid, now):
+    """Closes of finished UTC days, oldest first."""
+    return [c["close"] for c in candles(pid, now - 230 * 86400, "ONE_DAY") if c["start"] + 86400 <= now]
+
+
+def trend_weights(now, out):
+    """{coin: share of the book} from the last finished day's close against its four averages."""
+    w, notes = {}, []
+    for pid in TREND_COINS:
+        x = daily_closes(pid, now)
+        if len(x) < max(TREND_DAYS):
+            notes.append("%s has too little history" % pid)
+            continue
+        above = [n for n in TREND_DAYS if x[-1] > sum(x[-n:]) / n]
+        w[pid] = len(above) / float(len(TREND_DAYS)) / len(TREND_COINS)
+        notes.append("%s above %d of 4 averages%s" % (
+            pid.replace("-USD", ""), len(above), (" (%s days)" % "/".join(map(str, above))) if above else ""))
+    out("  trend: " + "; ".join(notes))
+    return w
+
+
+def trend_step(ledger, px, now, dry, out, trades):
+    want = trend_weights(now, out)
+    ledger["target"] = want
+    eq = value(ledger, px)
+    orders = []
+    for pid, share in want.items():
+        pos = ledger["positions"].get(pid)
+        have = pos["qty"] * px[pid] if pos else 0.0
+        diff = share * eq - have
+        if (share == 0 and have > 0) or abs(diff) >= TREND_BAND * eq:
+            orders.append((diff, pid))
+    for diff, pid in sorted(orders):   # sells first, so their cash is there for the buys
+        pos = ledger["positions"].get(pid)
+        why = "trend: %d of 4 averages" % round(want[pid] * len(TREND_COINS) * len(TREND_DAYS))
+        if diff < 0:
+            qty = pos["qty"] if want[pid] == 0 else min(pos["qty"], -diff / px[pid])
+            got = qty * px[pid] * (1 - COST)
+            basis = pos["cost"] * qty / pos["qty"]
+            pnl = got - basis
+            out("  SELL %-13s $%.2f at %.6g (%s): $%+.2f" % (pid, got, px[pid], why, pnl))
+            if dry:
+                continue
+            ledger["cash"] += got
+            ledger["stats"]["trades"] += 1
+            ledger["stats"]["wins"] += pnl > 0
+            ledger["stats"]["fees"] += qty * px[pid] * COST
+            pos["qty"] -= qty
+            pos["cost"] -= basis
+            if want[pid] == 0 or pos["qty"] * px[pid] < 1:
+                del ledger["positions"][pid]
+            record(trades, {"t": now, "side": "sell", "coin": pid, "price": px[pid], "qty": qty, "usd": got,
+                            "reason": why, "pnl": pnl, "pnl_pct": pnl / basis * 100})
+        else:
+            spend = min(diff, ledger["cash"])
+            if spend < 50:
+                continue
+            qty = spend / (px[pid] * (1 + COST))
+            out("  BUY  %-13s $%.2f at %.6g (%s)" % (pid, spend, px[pid], why))
+            if dry:
+                continue
+            ledger["cash"] -= spend
+            ledger["stats"]["fees"] += spend - qty * px[pid]
+            if pos:
+                pos["qty"] += qty
+                pos["cost"] += spend
+            else:
+                ledger["positions"][pid] = {"qty": qty, "entry": px[pid], "t": now, "cost": spend}
+            record(trades, {"t": now, "side": "buy", "coin": pid, "price": px[pid], "qty": qty, "usd": spend,
+                            "reason": why})
+
+
 def scores(trader, ledger, px):
-    """[(name, value)] for the trader and its two benchmarks over the same dates."""
-    names = [c.replace("-USD", "") for c in ledger["bench"]["memes"]]
-    return [(trader["label"], value(ledger, px)),
-            ("Just hold Bitcoin", sum(q * px.get(c, 0) for c, q in ledger["bench"]["btc"].items())),
-            ("Just hold %d alive meme coins (%s)" % (len(names), ", ".join(names)),
-             sum(q * px.get(c, 0) for c, q in ledger["bench"]["memes"].items()))]
+    """[(name, value)] for the trader and its benchmarks over the same dates."""
+    bench = ledger["bench"]
+    rows = [(trader["label"], value(ledger, px)),
+            ("Just hold Bitcoin", sum(q * px.get(c, 0) for c, q in bench["btc"].items()))]
+    if "pair" in bench:
+        rows.append(("Just hold half Bitcoin, half Ethereum", sum(q * px.get(c, 0) for c, q in bench["pair"].items())))
+    if "memes" in bench:
+        names = [c.replace("-USD", "") for c in bench["memes"]]
+        rows.append(("Just hold %d alive meme coins (%s)" % (len(names), ", ".join(names)),
+                     sum(q * px.get(c, 0) for c, q in bench["memes"].items())))
+    return rows
 
 
 def section(trader, ledger, px):
     s = ledger["stats"]
-    rule = ("Buys a pump only if the coin traded at least $1M a day on average in the week before it."
-            if trader["alive_only"] else "Buys any coin that pumps, even one that was dead before.")
+    if trader["kind"] == "trend":
+        rule = ("Holds Bitcoin and Ethereum, at most half the book each: a quarter of that half for every one "
+                "of the coin's 20, 50, 100 and 200-day averages it closed above yesterday, cash for the rest.")
+    elif trader["alive_only"]:
+        rule = "Buys a pump only if the coin traded at least $1M a day on average in the week before it."
+    else:
+        rule = "Buys any coin that pumps, even one that was dead before."
     out = ["## %s" % trader["label"], "",
            "Started %s UTC with $%s. %s" % (stamp(ledger["start"]["t"]), format(START_CASH, ",.0f"), rule), "",
            "| Player | Value | Return |", "| --- | --- | --- |"]
@@ -290,7 +390,17 @@ def section(trader, ledger, px):
     out += ["", "Closed trades: %d, winners: %d (%s). Fees and spread paid: $%s." % (
         s["trades"], s["wins"], ("%.0f%%" % (100.0 * s["wins"] / s["trades"])) if s["trades"] else "n/a",
         format(s["fees"], ",.2f")), "", "Holding now:", ""]
-    if ledger["positions"]:
+    if trader["kind"] == "trend":
+        eq = value(ledger, px)
+        out += ["| Coin | Share of book | Target | Value | P&L |", "| --- | --- | --- | --- | --- |"]
+        for c in TREND_COINS:
+            p = ledger["positions"].get(c)
+            val = p["qty"] * px.get(c, 0) if p else 0.0
+            out.append("| %s | %.0f%% | %.1f%% | $%s | %s |" % (
+                c, 100 * val / eq, 100 * ledger.get("target", {}).get(c, 0), format(val, ",.2f"),
+                ("%+.1f%%" % ((val * (1 - COST) / p["cost"] - 1) * 100)) if p else ""))
+        out.append("| cash | %.0f%% | | $%s | |" % (100 * ledger["cash"] / eq, format(ledger["cash"], ",.2f")))
+    elif ledger["positions"]:
         out += ["| Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |",
                 "| --- | --- | --- | --- | --- | --- | --- |"]
         for c, p in ledger["positions"].items():
@@ -312,10 +422,9 @@ def section(trader, ledger, px):
 
 
 def page(books, px, now):
-    out = ["# Crypto day trader", "",
+    out = ["# Crypto traders", "",
            "Paper money, $%s per trader. Updated %s UTC. Prices: Coinbase, live. Each trader is compared with "
-           "holding Bitcoin and holding the meme coins that were alive, over its own dates." % (
-               format(START_CASH, ",.0f"), stamp(now)), ""]
+           "just holding coins over its own dates." % (format(START_CASH, ",.0f"), stamp(now)), ""]
     for trader, ledger in books:
         out += section(trader, ledger, px)
     out += ["Rules are in `engine/crypto.py`. Most people who day-trade meme coins lose money; "
@@ -335,10 +444,13 @@ def main():
     books, seen = [], {}
     for trader in TRADERS:
         path = trader["ledger"]
-        ledger = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else new_ledger(px)
+        ledger = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else new_ledger(px, trader["kind"])
         print("%s: %d holding" % (trader["label"], len(ledger["positions"])))
-        check_exits(ledger, px, now, a.dry, print, trader["trades"])
-        check_entries(ledger, prods, px, now, a.dry, print, trader["trades"], trader["alive_only"], seen)
+        if trader["kind"] == "trend":
+            trend_step(ledger, px, now, a.dry, print, trader["trades"])
+        else:
+            check_exits(ledger, px, now, a.dry, print, trader["trades"])
+            check_entries(ledger, prods, px, now, a.dry, print, trader["trades"], trader["alive_only"], seen)
         ledger["cooldown"] = {c: t for c, t in ledger["cooldown"].items() if t > now}
         books.append((trader, ledger))
         if a.dry:
@@ -347,7 +459,8 @@ def main():
         peaks = {c: p.pop("peak", None) for c, p in ledger["positions"].items()}   # peaks are recomputed every run
         json.dump(ledger, open(path, "w", encoding="utf-8"), indent=1)
         for c, pk in peaks.items():
-            ledger["positions"][c]["peak"] = pk
+            if pk is not None:
+                ledger["positions"][c]["peak"] = pk
         for name, val in scores(trader, ledger, px):
             print("  %-40s $%s  %+.2f%%" % (name[:40], format(val, ",.2f"), (val / START_CASH - 1) * 100))
     if not a.dry:
