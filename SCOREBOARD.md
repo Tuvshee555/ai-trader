@@ -1,16 +1,18 @@
 # Tournament scoreboard
 
-Paper money, $40,000 per player. Updated after the 2026-11-18 session (2026-11-18 14:46 UTC).
+Paper money, $40,000 per player. Updated after the 2026-11-19 session (2026-11-19 14:45 UTC).
 
 Verdict on **2026-12-14**. Until then the leader can still change.
 
 | # | Player | Since | Value | Return | SPY same dates | vs SPY |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Engine (4 signals vote) | 2026-11-13 | $39,368 | -1.58% | -3.87% | **+2.29** |
-| 2 | Copy Berkshire 13F | 2026-11-13 | $39,165 | -2.09% | -3.87% | **+1.78** |
-| 3 | All 100 equally (fair bar) | 2026-11-13 | $38,762 | -3.10% | -3.87% | **+0.78** |
-| 4 | AI judgement (Claude) | 2026-11-16 | $39,154 | -2.12% | -2.45% | **+0.33** |
-| 5 | Momentum only | 2026-11-13 | $38,570 | -3.58% | -3.87% | **+0.30** |
+| 1 | Momentum top 3 (bold) | 2026-11-13 | $39,526 | -1.18% | -2.99% | **+1.81** |
+| 2 | Copy Berkshire 13F | 2026-11-13 | $38,932 | -2.67% | -2.99% | **+0.32** |
+| 3 | 3x Nasdaq in uptrends (bold) | 2026-11-19 | $39,962 | -0.09% | +0.00% | **-0.09** |
+| 4 | Engine (4 signals vote) | 2026-11-13 | $38,711 | -3.22% | -2.99% | **-0.23** |
+| 5 | All 100 equally (fair bar) | 2026-11-13 | $38,619 | -3.45% | -2.99% | **-0.46** |
+| 6 | Momentum only | 2026-11-13 | $38,454 | -3.86% | -2.99% | **-0.87** |
+| 7 | AI judgement (Claude) | 2026-11-16 | $38,578 | -3.55% | -1.56% | **-1.99** |
 
 ## Latest AI picks (2026-11-16 session, opus)
 
@@ -35,4 +37,4 @@ The AI-capex complex is unwinding hard (NVDA -27% over 3m and -13% last week, ch
 
 One month is mostly luck: a lead of a point or two proves nothing. See README.md for how it works.
 
-Crypto: the meme-coin day trader has its own page, [CRYPTO.md](CRYPTO.md), checked every hour.
+Crypto: the three crypto traders have their own page, [CRYPTO.md](CRYPTO.md), checked every hour.

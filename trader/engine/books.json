@@ -172,8 +172,34 @@
     "spy": 749.0
    },
    "last_signal_date": "2026-11-13"
+  },
+  "mom3": {
+   "cash": 2362.4,
+   "shares": {
+    "AMD": 22.113029337991183,
+    "TGT": 77.74056155150312,
+    "INTC": 206.6331437364328
+   },
+   "start": {
+    "session": "2026-11-13",
+    "value": 40000.0,
+    "spy": 760.07
+   },
+   "last_signal_date": "2026-11-12"
+  },
+  "tqqq": {
+   "cash": 2362.4,
+   "shares": {
+    "BIL": 410.63725222519525
+   },
+   "start": {
+    "session": "2026-11-19",
+    "value": 40000.0,
+    "spy": 737.31
+   },
+   "last_signal_date": "2026-11-18"
   }
  },
  "engine_spy_open": 760.07,
- "last_session": "2026-11-18"
+ "last_session": "2026-11-19"
 }
