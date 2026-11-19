@@ -1,6 +1,6 @@
 # Crypto day trader
 
-Paper money, $10,000 per trader. Updated 2026-11-19 05:07 UTC. Prices: Coinbase, live. Each trader is compared with holding Bitcoin and holding the meme coins that were alive, over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-19 06:07 UTC. Prices: Coinbase, live. Each trader is compared with holding Bitcoin and holding the meme coins that were alive, over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,480.65 | **-5.19%** |
-| Pump chaser, any coin | $9,080.41 | **-9.20%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $9,025.23 | **-9.75%** |
+| Just hold Bitcoin | $9,465.13 | **-5.35%** |
+| Pump chaser, any coin | $9,088.10 | **-9.12%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $9,042.67 | **-9.57%** |
 
 Closed trades: 12, winners: 3 (25%). Fees and spread paid: $229.32.
 
@@ -18,7 +18,7 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| ICNT-USD | 2026-11-18 11:07 | 0.3248 | 0.3381 | +3.1% | 0.31104 | 2026-11-19 11:07 |
+| ICNT-USD | 2026-11-18 11:07 | 0.3248 | 0.3395 | +3.5% | 0.31104 | 2026-11-19 11:07 |
 
 Last trades:
 
@@ -44,8 +44,8 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 | Player | Value | Return |
 | --- | --- | --- |
 | Pump chaser, alive coins only | $10,184.41 | **+1.84%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,941.54 | **-0.58%** |
-| Just hold Bitcoin | $9,843.43 | **-1.57%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,953.36 | **-0.47%** |
+| Just hold Bitcoin | $9,827.32 | **-1.73%** |
 
 Closed trades: 1, winners: 1 (100%). Fees and spread paid: $20.93.
 
