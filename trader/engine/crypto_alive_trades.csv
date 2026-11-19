@@ -1,3 +1,4 @@
 time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-18 15:07,buy,PEARL-USD,1.8914,1052.157001,2000.00,pump +8.0%,,
 2026-11-18 17:05,sell,PEARL-USD,2.08656,1052.157001,2184.41,trailing stop,184.41,9.22
+2026-11-19 07:07,buy,USELESS-USD,0.10548,19214.52987,2036.88,pump +10.5%,,
