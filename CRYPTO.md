@@ -1,6 +1,6 @@
 # Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-19 21:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-20 00:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,240.17 | **-7.60%** |
-| Pump chaser, any coin | $9,124.87 | **-8.75%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,801.44 | **-11.99%** |
+| Just hold Bitcoin | $9,253.77 | **-7.46%** |
+| Pump chaser, any coin | $9,235.88 | **-7.64%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,846.69 | **-11.53%** |
 
 Closed trades: 14, winners: 4 (29%). Fees and spread paid: $275.88.
 
@@ -18,8 +18,8 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.09844 | -7.6% | 0.095895 | 2026-11-20 07:07 |
-| RAVE-USD | 2026-11-19 17:07 | 0.1168 | 0.1234 | +4.6% | 0.11709 | 2026-11-20 17:07 |
+| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.09933 | -6.8% | 0.095895 | 2026-11-20 07:07 |
+| RAVE-USD | 2026-11-19 17:07 | 0.1168 | 0.1296 | +9.9% | 0.12132 | 2026-11-20 17:07 |
 
 Last trades:
 
@@ -44,9 +44,9 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $10,039.01 | **+0.39%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,683.20 | **-3.17%** |
-| Just hold Bitcoin | $9,593.75 | **-4.06%** |
+| Pump chaser, alive coins only | $10,056.11 | **+0.56%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,728.34 | **-2.72%** |
+| Just hold Bitcoin | $9,607.87 | **-3.92%** |
 
 Closed trades: 1, winners: 1 (100%). Fees and spread paid: $31.06.
 
@@ -54,7 +54,7 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.09844 | -7.6% | 0.095895 | 2026-11-20 07:07 |
+| USELESS-USD | 2026-11-19 07:07 | 0.10548 | 0.09933 | -6.8% | 0.095895 | 2026-11-20 07:07 |
 
 Last trades:
 
@@ -71,8 +71,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 | Player | Value | Return |
 | --- | --- | --- |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
-| Just hold half Bitcoin, half Ethereum | $9,745.11 | **-2.55%** |
-| Just hold Bitcoin | $9,742.34 | **-2.58%** |
+| Just hold half Bitcoin, half Ethereum | $9,760.44 | **-2.40%** |
+| Just hold Bitcoin | $9,756.68 | **-2.43%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
 
