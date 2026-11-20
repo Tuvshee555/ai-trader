@@ -1,18 +1,18 @@
 # Tournament scoreboard
 
-Paper money, $40,000 per player. Updated after the 2026-11-19 session (2026-11-19 14:45 UTC).
+Paper money, $40,000 per player. Updated after the 2026-11-20 session (2026-11-20 14:46 UTC).
 
 Verdict on **2026-12-14**. Until then the leader can still change.
 
 | # | Player | Since | Value | Return | SPY same dates | vs SPY |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Momentum top 3 (bold) | 2026-11-13 | $39,526 | -1.18% | -2.99% | **+1.81** |
-| 2 | Copy Berkshire 13F | 2026-11-13 | $38,932 | -2.67% | -2.99% | **+0.32** |
-| 3 | 3x Nasdaq in uptrends (bold) | 2026-11-19 | $39,962 | -0.09% | +0.00% | **-0.09** |
-| 4 | Engine (4 signals vote) | 2026-11-13 | $38,711 | -3.22% | -2.99% | **-0.23** |
-| 5 | All 100 equally (fair bar) | 2026-11-13 | $38,619 | -3.45% | -2.99% | **-0.46** |
-| 6 | Momentum only | 2026-11-13 | $38,454 | -3.86% | -2.99% | **-0.87** |
-| 7 | AI judgement (Claude) | 2026-11-16 | $38,578 | -3.55% | -1.56% | **-1.99** |
+| 1 | Engine (4 signals vote) | 2026-11-13 | $38,947 | -2.63% | -6.10% | **+3.47** |
+| 2 | 3x Nasdaq in uptrends (bold) | 2026-11-19 | $39,975 | -0.06% | -3.20% | **+3.14** |
+| 3 | Copy Berkshire 13F | 2026-11-13 | $38,712 | -3.22% | -6.10% | **+2.88** |
+| 4 | All 100 equally (fair bar) | 2026-11-13 | $38,136 | -4.66% | -6.10% | **+1.44** |
+| 5 | Momentum only | 2026-11-13 | $38,098 | -4.75% | -6.10% | **+1.35** |
+| 6 | AI judgement (Claude) | 2026-11-16 | $38,621 | -3.45% | -4.71% | **+1.26** |
+| 7 | Momentum top 3 (bold) | 2026-11-13 | $37,182 | -7.04% | -6.10% | **-0.94** |
 
 ## Latest AI picks (2026-11-16 session, opus)
 
