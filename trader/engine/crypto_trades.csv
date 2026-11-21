@@ -31,3 +31,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-19 20:45,sell,SYRUP-USD,0.09684,17319.21031,1668.81,trailing stop,-204.06,-10.90
 2026-11-20 01:50,sell,USELESS-USD,0.095895,17192.84395,1640.46,trailing stop,-182.10,-9.99
 2026-11-20 02:25,sell,RAVE-USD,0.12132,15436.611,1863.41,trailing stop,51.39,2.84
+2026-11-21 08:07,buy,DRV-USD,0.27859,6451.394369,1806.28,pump +11.4%,,

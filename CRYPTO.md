@@ -1,6 +1,6 @@
 # Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-21 06:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-21 08:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,20 +8,23 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, any coin | $9,031.40 | **-9.69%** |
-| Just hold Bitcoin | $8,313.19 | **-16.87%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $7,668.56 | **-23.31%** |
+| Pump chaser, any coin | $9,022.42 | **-9.78%** |
+| Just hold Bitcoin | $8,620.42 | **-13.80%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $7,839.67 | **-21.60%** |
 
-Closed trades: 16, winners: 5 (31%). Fees and spread paid: $293.49.
+Closed trades: 16, winners: 5 (31%). Fees and spread paid: $302.48.
 
 Holding now:
 
-Nothing. Cash, waiting for a coin that pumps.
+| Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
+| --- | --- | --- | --- | --- | --- | --- |
+| DRV-USD | 2026-11-21 08:07 | 0.27859 | 0.27859 | -1.0% | 0.250731 | 2026-11-22 08:07 |
 
 Last trades:
 
 | Time (UTC) | Side | Coin | Price | $ | Why | P&L |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-21 08:07 | buy | DRV-USD | 0.27859 | 1806.28 | pump +11.4% |  |
 | 2026-11-20 02:25 | sell | RAVE-USD | 0.12132 | 1863.41 | trailing stop | $51.39 (2.84%) |
 | 2026-11-20 01:50 | sell | USELESS-USD | 0.095895 | 1640.46 | trailing stop | $-182.10 (-9.99%) |
 | 2026-11-19 20:45 | sell | SYRUP-USD | 0.09684 | 1668.81 | trailing stop | $-204.06 (-10.90%) |
@@ -33,7 +36,6 @@ Last trades:
 | 2026-11-19 03:07 | buy | SENT-USD | 0.02236 | 1795.52 | pump +19.4% |  |
 | 2026-11-19 02:20 | sell | PROS-USD | 0.64206 | 1674.74 | trailing stop | $-130.49 (-7.23%) |
 | 2026-11-19 01:55 | sell | IRYS-USD | 0.023463 | 1922.77 | trailing stop | $110.88 (6.12%) |
-| 2026-11-19 01:07 | buy | IRYS-USD | 0.02189 | 1811.90 | pump +49.5% |  |
 
 ## Pump chaser, alive coins only
 
@@ -41,20 +43,23 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $9,980.89 | **-0.19%** |
-| Just hold Bitcoin | $8,631.29 | **-13.69%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $8,461.19 | **-15.39%** |
+| Pump chaser, alive coins only | $9,970.96 | **-0.29%** |
+| Just hold Bitcoin | $8,950.29 | **-10.50%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $8,646.27 | **-13.54%** |
 
-Closed trades: 2, winners: 1 (50%). Fees and spread paid: $40.27.
+Closed trades: 2, winners: 1 (50%). Fees and spread paid: $50.21.
 
 Holding now:
 
-Nothing. Cash, waiting for a coin that pumps.
+| Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
+| --- | --- | --- | --- | --- | --- | --- |
+| DRV-USD | 2026-11-21 08:07 | 0.27859 | 0.27859 | -1.0% | 0.250731 | 2026-11-22 08:07 |
 
 Last trades:
 
 | Time (UTC) | Side | Coin | Price | $ | Why | P&L |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-21 08:07 | buy | DRV-USD | 0.27859 | 1996.18 | pump +11.4% |  |
 | 2026-11-20 01:50 | sell | USELESS-USD | 0.095895 | 1833.36 | trailing stop | $-203.52 (-9.99%) |
 | 2026-11-19 07:07 | buy | USELESS-USD | 0.10548 | 2036.88 | pump +10.5% |  |
 | 2026-11-18 17:05 | sell | PEARL-USD | 2.08656 | 2184.41 | trailing stop | $184.41 (9.22%) |
@@ -67,8 +72,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 | Player | Value | Return |
 | --- | --- | --- |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
-| Just hold Bitcoin | $8,764.98 | **-12.35%** |
-| Just hold half Bitcoin, half Ethereum | $8,714.89 | **-12.85%** |
+| Just hold Bitcoin | $9,088.92 | **-9.11%** |
+| Just hold half Bitcoin, half Ethereum | $9,055.81 | **-9.44%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
 
