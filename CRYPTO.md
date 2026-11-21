@@ -1,6 +1,6 @@
 # Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-21 08:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-21 12:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, any coin | $9,022.42 | **-9.78%** |
-| Just hold Bitcoin | $8,620.42 | **-13.80%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $7,839.67 | **-21.60%** |
+| Pump chaser, any coin | $9,307.70 | **-6.92%** |
+| Just hold Bitcoin | $8,671.87 | **-13.28%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $7,984.94 | **-20.15%** |
 
 Closed trades: 16, winners: 5 (31%). Fees and spread paid: $302.48.
 
@@ -18,7 +18,7 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| DRV-USD | 2026-11-21 08:07 | 0.27859 | 0.27859 | -1.0% | 0.250731 | 2026-11-22 08:07 |
+| DRV-USD | 2026-11-21 08:07 | 0.27859 | 0.32281 | +14.7% | 0.292122 | 2026-11-22 08:07 |
 
 Last trades:
 
@@ -43,9 +43,9 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $9,970.96 | **-0.29%** |
-| Just hold Bitcoin | $8,950.29 | **-10.50%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $8,646.27 | **-13.54%** |
+| Pump chaser, alive coins only | $10,286.24 | **+2.86%** |
+| Just hold Bitcoin | $9,003.71 | **-9.96%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $8,799.73 | **-12.00%** |
 
 Closed trades: 2, winners: 1 (50%). Fees and spread paid: $50.21.
 
@@ -53,7 +53,7 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| DRV-USD | 2026-11-21 08:07 | 0.27859 | 0.27859 | -1.0% | 0.250731 | 2026-11-22 08:07 |
+| DRV-USD | 2026-11-21 08:07 | 0.27859 | 0.32281 | +14.7% | 0.292122 | 2026-11-22 08:07 |
 
 Last trades:
 
@@ -72,8 +72,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 | Player | Value | Return |
 | --- | --- | --- |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
-| Just hold Bitcoin | $9,088.92 | **-9.11%** |
-| Just hold half Bitcoin, half Ethereum | $9,055.81 | **-9.44%** |
+| Just hold half Bitcoin, half Ethereum | $9,151.53 | **-8.48%** |
+| Just hold Bitcoin | $9,143.16 | **-8.57%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
 
