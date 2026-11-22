@@ -34,3 +34,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-21 08:07,buy,DRV-USD,0.27859,6451.394369,1806.28,pump +11.4%,,
 2026-11-21 14:07,buy,VVV-USD,23.1299,79.76126164,1854.09,pump +10.6%,,
 2026-11-22 07:05,sell,DRV-USD,0.316674,6451.394369,2032.77,trailing stop,226.49,12.54
+2026-11-22 09:07,buy,RENDER-USD,1.3324,1407.667186,1884.95,pump +8.3%,,

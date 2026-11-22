@@ -1,6 +1,6 @@
 # Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-22 08:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-22 09:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,22 +8,24 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, any coin | $9,407.45 | **-5.93%** |
-| Just hold Bitcoin | $8,806.67 | **-11.93%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,111.88 | **-18.88%** |
+| Pump chaser, any coin | $9,415.39 | **-5.85%** |
+| Just hold Bitcoin | $8,898.80 | **-11.01%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,179.02 | **-18.21%** |
 
-Closed trades: 17, winners: 6 (35%). Fees and spread paid: $321.92.
+Closed trades: 17, winners: 6 (35%). Fees and spread paid: $331.29.
 
 Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| VVV-USD | 2026-11-21 14:07 | 23.1299 | 25.1206 | +7.5% | 22.9456 | 2026-11-22 14:07 |
+| VVV-USD | 2026-11-21 14:07 | 23.1299 | 25.3377 | +8.5% | 23.2187 | 2026-11-22 14:07 |
+| RENDER-USD | 2026-11-22 09:07 | 1.3324 | 1.3324 | -1.0% | 1.19916 | 2026-11-23 09:07 |
 
 Last trades:
 
 | Time (UTC) | Side | Coin | Price | $ | Why | P&L |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-22 09:07 | buy | RENDER-USD | 1.3324 | 1884.95 | pump +8.3% |  |
 | 2026-11-22 07:05 | sell | DRV-USD | 0.316674 | 2032.77 | trailing stop | $226.49 (12.54%) |
 | 2026-11-21 14:07 | buy | VVV-USD | 23.1299 | 1854.09 | pump +10.6% |  |
 | 2026-11-21 08:07 | buy | DRV-USD | 0.27859 | 1806.28 | pump +11.4% |  |
@@ -35,7 +37,6 @@ Last trades:
 | 2026-11-19 11:35 | sell | ICNT-USD | 0.39204 | 2144.49 | trailing stop | $349.95 (19.50%) |
 | 2026-11-19 07:07 | buy | USELESS-USD | 0.10548 | 1822.57 | pump +10.5% |  |
 | 2026-11-19 04:10 | sell | SENT-USD | 0.023076 | 1834.57 | trailing stop | $39.06 (2.18%) |
-| 2026-11-19 03:07 | buy | SENT-USD | 0.02236 | 1795.52 | pump +19.4% |  |
 
 ## Pump chaser, alive coins only
 
@@ -43,22 +44,24 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $10,396.48 | **+3.96%** |
-| Just hold Bitcoin | $9,143.66 | **-8.56%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $8,911.22 | **-10.89%** |
+| Pump chaser, alive coins only | $10,405.25 | **+4.05%** |
+| Just hold Bitcoin | $9,239.32 | **-7.61%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $8,995.68 | **-10.04%** |
 
-Closed trades: 3, winners: 2 (67%). Fees and spread paid: $71.69.
+Closed trades: 3, winners: 2 (67%). Fees and spread paid: $82.05.
 
 Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| VVV-USD | 2026-11-21 14:07 | 23.1299 | 25.1206 | +7.5% | 22.9456 | 2026-11-22 14:07 |
+| VVV-USD | 2026-11-21 14:07 | 23.1299 | 25.3377 | +8.5% | 23.2187 | 2026-11-22 14:07 |
+| RENDER-USD | 2026-11-22 09:07 | 1.3324 | 1.3324 | -1.0% | 1.19916 | 2026-11-23 09:07 |
 
 Last trades:
 
 | Time (UTC) | Side | Coin | Price | $ | Why | P&L |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-22 09:07 | buy | RENDER-USD | 1.3324 | 2083.12 | pump +8.3% |  |
 | 2026-11-22 07:05 | sell | DRV-USD | 0.316674 | 2246.48 | trailing stop | $250.31 (12.54%) |
 | 2026-11-21 14:07 | buy | VVV-USD | 23.1299 | 2049.02 | pump +10.6% |  |
 | 2026-11-21 08:07 | buy | DRV-USD | 0.27859 | 1996.18 | pump +11.4% |  |
@@ -74,8 +77,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 | Player | Value | Return |
 | --- | --- | --- |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
-| Just hold Bitcoin | $9,285.28 | **-7.15%** |
-| Just hold half Bitcoin, half Ethereum | $9,264.97 | **-7.35%** |
+| Just hold Bitcoin | $9,382.43 | **-6.18%** |
+| Just hold half Bitcoin, half Ethereum | $9,364.95 | **-6.35%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
 
