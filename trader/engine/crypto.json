@@ -3,14 +3,8 @@
   "t": 1794640856.2246451,
   "cash": 10000.0
  },
- "cash": 5371.027352047749,
+ "cash": 7403.801268021976,
  "positions": {
-  "DRV-USD": {
-   "qty": 6451.394368579689,
-   "entry": 0.27859,
-   "t": 1795248435.1806884,
-   "cost": 1806.2804269283283
-  },
   "VVV-USD": {
    "qty": 79.76126164131176,
    "entry": 23.1299,
@@ -18,7 +12,9 @@
    "cost": 1854.0943556655636
   }
  },
- "cooldown": {},
+ "cooldown": {
+  "DRV-USD": 1795417500.0
+ },
  "bench": {
   "btc": {
    "BTC-USD": 0.14926137263444977
@@ -32,8 +28,8 @@
   "memes_rule": "meme coins with >= $1M/day average in the 7 days before the start; rebuilt 2026-11-18 at start prices"
  },
  "stats": {
-  "trades": 16,
-  "wins": 5,
-  "fees": 311.7007552008732
+  "trades": 17,
+  "wins": 6,
+  "fees": 321.9156995022512
  }
 }

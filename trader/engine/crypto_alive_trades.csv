@@ -5,3 +5,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-20 01:50,sell,USELESS-USD,0.095895,19214.52987,1833.36,trailing stop,-203.52,-9.99
 2026-11-21 08:07,buy,DRV-USD,0.27859,7129.644051,1996.18,pump +11.4%,,
 2026-11-21 14:07,buy,VVV-USD,23.1299,88.14674349,2049.02,pump +10.6%,,
+2026-11-22 07:05,sell,DRV-USD,0.316674,7129.644051,2246.48,trailing stop,250.31,12.54
