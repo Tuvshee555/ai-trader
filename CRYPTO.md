@@ -1,6 +1,6 @@
 # Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-22 15:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-22 17:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,24 +8,26 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, any coin | $9,380.39 | **-6.20%** |
-| Just hold Bitcoin | $9,084.23 | **-9.16%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,245.27 | **-17.55%** |
+| Pump chaser, any coin | $9,383.06 | **-6.17%** |
+| Just hold Bitcoin | $9,085.60 | **-9.14%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,265.98 | **-17.34%** |
 
-Closed trades: 18, winners: 7 (39%). Fees and spread paid: $360.28.
+Closed trades: 18, winners: 7 (39%). Fees and spread paid: $369.63.
 
 Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| RENDER-USD | 2026-11-22 09:07 | 1.3324 | 1.3274 | -1.4% | 1.22166 | 2026-11-23 09:07 |
-| CRV-USD | 2026-11-22 11:07 | 0.1849 | 0.1842 | -1.4% | 0.16875 | 2026-11-23 11:07 |
-| ENA-USD | 2026-11-22 11:07 | 0.10229 | 0.10117 | -2.1% | 0.093438 | 2026-11-23 11:07 |
+| RENDER-USD | 2026-11-22 09:07 | 1.3324 | 1.3403 | -0.4% | 1.22166 | 2026-11-23 09:07 |
+| CRV-USD | 2026-11-22 11:07 | 0.1849 | 0.1828 | -2.1% | 0.16875 | 2026-11-23 11:07 |
+| ENA-USD | 2026-11-22 11:07 | 0.10229 | 0.10161 | -1.7% | 0.093438 | 2026-11-23 11:07 |
+| PUMP-USD | 2026-11-22 17:07 | 0.002581 | 0.002581 | -1.0% | 0.0023229 | 2026-11-23 17:07 |
 
 Last trades:
 
 | Time (UTC) | Side | Coin | Price | $ | Why | P&L |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-22 17:07 | buy | PUMP-USD | 0.002581 | 1878.48 | pump +8.2% |  |
 | 2026-11-22 15:07 | sell | VVV-USD | 25.6966 | 2039.35 | 24 hours up | $185.25 (9.99%) |
 | 2026-11-22 11:07 | buy | ENA-USD | 0.10229 | 1882.33 | pump +8.2% |  |
 | 2026-11-22 11:07 | buy | CRV-USD | 0.1849 | 1884.20 | pump +9.7% |  |
@@ -37,7 +39,6 @@ Last trades:
 | 2026-11-20 01:50 | sell | USELESS-USD | 0.095895 | 1640.46 | trailing stop | $-182.10 (-9.99%) |
 | 2026-11-19 20:45 | sell | SYRUP-USD | 0.09684 | 1668.81 | trailing stop | $-204.06 (-10.90%) |
 | 2026-11-19 17:07 | buy | RAVE-USD | 0.1168 | 1812.01 | pump +13.0% |  |
-| 2026-11-19 15:07 | buy | SYRUP-USD | 0.1076 | 1872.86 | pump +10.9% |  |
 
 ## Pump chaser, alive coins only
 
@@ -45,24 +46,26 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $10,366.57 | **+3.67%** |
-| Just hold Bitcoin | $9,431.85 | **-5.68%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,059.55 | **-9.40%** |
+| Pump chaser, alive coins only | $10,369.52 | **+3.70%** |
+| Just hold Bitcoin | $9,433.27 | **-5.67%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,072.04 | **-9.28%** |
 
-Closed trades: 4, winners: 3 (75%). Fees and spread paid: $114.09.
+Closed trades: 4, winners: 3 (75%). Fees and spread paid: $124.41.
 
 Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| RENDER-USD | 2026-11-22 09:07 | 1.3324 | 1.3274 | -1.4% | 1.22166 | 2026-11-23 09:07 |
-| CRV-USD | 2026-11-22 11:07 | 0.1849 | 0.1842 | -1.4% | 0.16875 | 2026-11-23 11:07 |
-| ENA-USD | 2026-11-22 11:07 | 0.10229 | 0.10117 | -2.1% | 0.093438 | 2026-11-23 11:07 |
+| RENDER-USD | 2026-11-22 09:07 | 1.3324 | 1.3403 | -0.4% | 1.22166 | 2026-11-23 09:07 |
+| CRV-USD | 2026-11-22 11:07 | 0.1849 | 0.1828 | -2.1% | 0.16875 | 2026-11-23 11:07 |
+| ENA-USD | 2026-11-22 11:07 | 0.10229 | 0.10161 | -1.7% | 0.093438 | 2026-11-23 11:07 |
+| PUMP-USD | 2026-11-22 17:07 | 0.002581 | 0.002581 | -1.0% | 0.0023229 | 2026-11-23 17:07 |
 
 Last trades:
 
 | Time (UTC) | Side | Coin | Price | $ | Why | P&L |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-22 17:07 | buy | PUMP-USD | 0.002581 | 2075.97 | pump +8.2% |  |
 | 2026-11-22 15:07 | sell | VVV-USD | 25.6966 | 2253.75 | 24 hours up | $204.73 (9.99%) |
 | 2026-11-22 11:07 | buy | ENA-USD | 0.10229 | 2080.22 | pump +8.2% |  |
 | 2026-11-22 11:07 | buy | CRV-USD | 0.1849 | 2082.29 | pump +9.7% |  |
@@ -82,8 +85,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 | Player | Value | Return |
 | --- | --- | --- |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
-| Just hold Bitcoin | $9,577.93 | **-4.22%** |
-| Just hold half Bitcoin, half Ethereum | $9,538.72 | **-4.61%** |
+| Just hold Bitcoin | $9,579.37 | **-4.21%** |
+| Just hold half Bitcoin, half Ethereum | $9,548.94 | **-4.51%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
 
