@@ -3,19 +3,13 @@
   "t": 1794640856.2246451,
   "cash": 10000.0
  },
- "cash": 5507.876785351343,
+ "cash": 7340.221467893239,
  "positions": {
   "ALGO-USD": {
    "qty": 22258.53981019432,
    "entry": 0.08584,
    "t": 1795442834.4297838,
    "cost": 1920.2264225936158
-  },
-  "QNT-USD": {
-   "qty": 11.834409387351226,
-   "entry": 161.29,
-   "t": 1795442834.4297838,
-   "cost": 1918.3157495363084
   }
  },
  "cooldown": {
@@ -25,7 +19,8 @@
   "ELSA-USD": 1795517100.0,
   "PEARL-USD": 1795534200.0,
   "PUMP-USD": 1795540042.7143586,
-  "LIGHTER-USD": 1795547400.0
+  "LIGHTER-USD": 1795547400.0,
+  "QNT-USD": 1795559100.0
  },
  "bench": {
   "btc": {
@@ -40,8 +35,8 @@
   "memes_rule": "meme coins with >= $1M/day average in the 7 days before the start; rebuilt 2026-11-18 at start prices"
  },
  "stats": {
-  "trades": 25,
+  "trades": 26,
   "wins": 9,
-  "fees": 482.24329727034717
+  "fees": 491.4510594941758
  }
 }
