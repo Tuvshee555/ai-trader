@@ -1,6 +1,6 @@
 # Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-23 14:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-23 15:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, any coin | $9,572.86 | **-4.27%** |
-| Just hold Bitcoin | $9,388.90 | **-6.11%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,703.95 | **-12.96%** |
+| Pump chaser, any coin | $9,657.17 | **-3.43%** |
+| Just hold Bitcoin | $9,422.11 | **-5.78%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,934.40 | **-10.66%** |
 
 Closed trades: 22, winners: 8 (36%). Fees and spread paid: $454.57.
 
@@ -18,11 +18,11 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| PUMP-USD | 2026-11-22 17:07 | 0.002581 | 0.002668 | +2.3% | 0.0024219 | 2026-11-23 17:07 |
-| PEARL-USD | 2026-11-23 10:07 | 2.3377 | 2.4251 | +2.7% | 2.18259 | 2026-11-24 10:07 |
-| ALGO-USD | 2026-11-23 14:07 | 0.08584 | 0.08584 | -1.0% | 0.077256 | 2026-11-24 14:07 |
-| QNT-USD | 2026-11-23 14:07 | 161.29 | 161.29 | -1.0% | 145.161 | 2026-11-24 14:07 |
-| LIGHTER-USD | 2026-11-23 14:07 | 2.57 | 2.57 | -1.0% | 2.313 | 2026-11-24 14:07 |
+| PUMP-USD | 2026-11-22 17:07 | 0.002581 | 0.00271 | +4.0% | 0.002538 | 2026-11-23 17:07 |
+| PEARL-USD | 2026-11-23 10:07 | 2.3377 | 2.3018 | -2.5% | 2.25 | 2026-11-24 10:07 |
+| ALGO-USD | 2026-11-23 14:07 | 0.08584 | 0.08535 | -1.6% | 0.078552 | 2026-11-24 14:07 |
+| QNT-USD | 2026-11-23 14:07 | 161.29 | 165.28 | +1.5% | 155.61 | 2026-11-24 14:07 |
+| LIGHTER-USD | 2026-11-23 14:07 | 2.57 | 2.736 | +5.4% | 2.4777 | 2026-11-24 14:07 |
 
 Last trades:
 
@@ -47,25 +47,27 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $10,617.91 | **+6.18%** |
-| Just hold Bitcoin | $9,748.17 | **-2.52%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,620.42 | **-3.80%** |
+| Pump chaser, alive coins only | $10,714.01 | **+7.14%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,842.62 | **-1.57%** |
+| Just hold Bitcoin | $9,782.65 | **-2.17%** |
 
-Closed trades: 7, winners: 3 (43%). Fees and spread paid: $187.00.
+Closed trades: 7, winners: 3 (43%). Fees and spread paid: $196.71.
 
 Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| PUMP-USD | 2026-11-22 17:07 | 0.002581 | 0.002668 | +2.3% | 0.0024219 | 2026-11-23 17:07 |
-| PEARL-USD | 2026-11-23 08:07 | 2.1907 | 2.4251 | +9.6% | 2.18259 | 2026-11-24 08:07 |
-| QNT-USD | 2026-11-23 14:07 | 161.29 | 161.29 | -1.0% | 145.161 | 2026-11-24 14:07 |
-| LIGHTER-USD | 2026-11-23 14:07 | 2.57 | 2.57 | -1.0% | 2.313 | 2026-11-24 14:07 |
+| PUMP-USD | 2026-11-22 17:07 | 0.002581 | 0.00271 | +4.0% | 0.002538 | 2026-11-23 17:07 |
+| PEARL-USD | 2026-11-23 08:07 | 2.1907 | 2.3018 | +4.0% | 2.25 | 2026-11-24 08:07 |
+| QNT-USD | 2026-11-23 14:07 | 161.29 | 165.28 | +1.5% | 155.61 | 2026-11-24 14:07 |
+| LIGHTER-USD | 2026-11-23 14:07 | 2.57 | 2.736 | +5.4% | 2.4777 | 2026-11-24 14:07 |
+| FARTCOIN-USD | 2026-11-23 15:07 | 0.08754 | 0.08754 | -1.0% | 0.078786 | 2026-11-24 15:07 |
 
 Last trades:
 
 | Time (UTC) | Side | Coin | Price | $ | Why | P&L |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-23 15:07 | buy | FARTCOIN-USD | 0.08754 | 1953.26 | pump +12.5% |  |
 | 2026-11-23 14:07 | buy | LIGHTER-USD | 2.57 | 2125.70 | pump +8.0% |  |
 | 2026-11-23 14:07 | buy | QNT-USD | 161.29 | 2127.81 | pump +12.3% |  |
 | 2026-11-23 11:07 | sell | ENA-USD | 0.1031 | 2075.83 | 24 hours up | $-4.39 (-0.21%) |
@@ -77,7 +79,6 @@ Last trades:
 | 2026-11-22 11:07 | buy | ENA-USD | 0.10229 | 2080.22 | pump +8.2% |  |
 | 2026-11-22 11:07 | buy | CRV-USD | 0.1849 | 2082.29 | pump +9.7% |  |
 | 2026-11-22 09:07 | buy | RENDER-USD | 1.3324 | 2083.12 | pump +8.3% |  |
-| 2026-11-22 07:05 | sell | DRV-USD | 0.316674 | 2246.48 | trailing stop | $250.31 (12.54%) |
 
 ## Trend: Bitcoin + Ethereum
 
@@ -86,8 +87,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 | Player | Value | Return |
 | --- | --- | --- |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
-| Just hold half Bitcoin, half Ethereum | $9,915.80 | **-0.84%** |
-| Just hold Bitcoin | $9,899.16 | **-1.01%** |
+| Just hold Bitcoin | $9,934.17 | **-0.66%** |
+| Just hold half Bitcoin, half Ethereum | $9,918.26 | **-0.82%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
 
