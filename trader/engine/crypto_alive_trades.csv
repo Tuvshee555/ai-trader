@@ -19,3 +19,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-23 14:07,buy,LIGHTER-USD,2.57,823.0045077,2125.70,pump +8.0%,,
 2026-11-23 15:07,buy,FARTCOIN-USD,0.08754,22201.76607,1953.26,pump +12.5%,,
 2026-11-23 15:30,sell,PEARL-USD,2.25,947.1897417,2120.52,trailing stop,35.14,1.68
+2026-11-23 17:07,sell,PUMP-USD,0.002634,800326.2122,2097.52,24 hours up,21.55,1.04
