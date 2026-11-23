@@ -3,19 +3,13 @@
   "t": 1794640856.2246451,
   "cash": 10000.0
  },
- "cash": 0.0,
+ "cash": 1833.2949187257557,
  "positions": {
   "PUMP-USD": {
    "qty": 724190.4338664034,
    "entry": 0.002581,
    "t": 1795367235.1366754,
    "cost": 1878.481187358233
-  },
-  "PEARL-USD": {
-   "qty": 818.8922026692376,
-   "entry": 2.3377,
-   "t": 1795428434.859809,
-   "cost": 1923.8959236907756
   },
   "ALGO-USD": {
    "qty": 22258.53981019432,
@@ -40,7 +34,8 @@
   "RENDER-USD": 1795511242.6725385,
   "CRV-USD": 1795518435.9308662,
   "ENA-USD": 1795518435.9308662,
-  "ELSA-USD": 1795517100.0
+  "ELSA-USD": 1795517100.0,
+  "PEARL-USD": 1795534200.0
  },
  "bench": {
   "btc": {
@@ -55,8 +50,8 @@
   "memes_rule": "meme coins with >= $1M/day average in the 7 days before the start; rebuilt 2026-11-18 at start prices"
  },
  "stats": {
-  "trades": 22,
+  "trades": 23,
   "wins": 8,
-  "fees": 454.5655244796369
+  "fees": 463.77806175966583
  }
 }
