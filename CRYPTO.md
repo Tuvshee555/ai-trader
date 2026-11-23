@@ -1,6 +1,6 @@
 # Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-23 11:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-23 12:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, any coin | $9,464.63 | **-5.35%** |
-| Just hold Bitcoin | $9,152.84 | **-8.47%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,394.27 | **-16.06%** |
+| Pump chaser, any coin | $9,497.76 | **-5.02%** |
+| Just hold Bitcoin | $9,157.08 | **-8.43%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,415.05 | **-15.85%** |
 
 Closed trades: 22, winners: 8 (36%). Fees and spread paid: $426.29.
 
@@ -18,8 +18,8 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| PUMP-USD | 2026-11-22 17:07 | 0.002581 | 0.002565 | -1.6% | 0.0023688 | 2026-11-23 17:07 |
-| PEARL-USD | 2026-11-23 10:07 | 2.3377 | 2.3495 | -0.5% | 2.16567 | 2026-11-24 10:07 |
+| PUMP-USD | 2026-11-22 17:07 | 0.002581 | 0.002574 | -1.3% | 0.0023688 | 2026-11-23 17:07 |
+| PEARL-USD | 2026-11-23 10:07 | 2.3377 | 2.382 | +0.9% | 2.16567 | 2026-11-24 10:07 |
 
 Last trades:
 
@@ -44,9 +44,9 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $10,485.03 | **+4.85%** |
-| Just hold Bitcoin | $9,503.08 | **-4.97%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,221.56 | **-7.78%** |
+| Pump chaser, alive coins only | $10,523.02 | **+5.23%** |
+| Just hold Bitcoin | $9,507.48 | **-4.93%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,258.14 | **-7.42%** |
 
 Closed trades: 7, winners: 3 (43%). Fees and spread paid: $165.83.
 
@@ -54,8 +54,8 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| PUMP-USD | 2026-11-22 17:07 | 0.002581 | 0.002565 | -1.6% | 0.0023688 | 2026-11-23 17:07 |
-| PEARL-USD | 2026-11-23 08:07 | 2.1907 | 2.3495 | +6.2% | 2.16567 | 2026-11-24 08:07 |
+| PUMP-USD | 2026-11-22 17:07 | 0.002581 | 0.002574 | -1.3% | 0.0023688 | 2026-11-23 17:07 |
+| PEARL-USD | 2026-11-23 08:07 | 2.1907 | 2.382 | +7.7% | 2.16567 | 2026-11-24 08:07 |
 
 Last trades:
 
@@ -81,8 +81,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 | Player | Value | Return |
 | --- | --- | --- |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
-| Just hold Bitcoin | $9,650.27 | **-3.50%** |
-| Just hold half Bitcoin, half Ethereum | $9,607.83 | **-3.92%** |
+| Just hold Bitcoin | $9,654.74 | **-3.45%** |
+| Just hold half Bitcoin, half Ethereum | $9,611.37 | **-3.89%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
 
