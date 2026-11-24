@@ -54,3 +54,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-23 22:25,sell,QNT-USD,155.61,11.83440939,1832.34,trailing stop,-85.97,-4.48
 2026-11-24 05:07,buy,MON-USD,0.01311,138695.2469,1827.39,pump +8.3%,,
 2026-11-24 09:55,sell,MON-USD,0.012456,138695.2469,1718.95,trailing stop,-108.44,-5.93
+2026-11-24 13:10,sell,ALGO-USD,0.078552,22258.53981,1739.71,trailing stop,-180.52,-9.40
