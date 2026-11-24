@@ -23,3 +23,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-23 19:10,sell,LIGHTER-USD,2.5002,823.0045077,2047.39,trailing stop,-78.31,-3.68
 2026-11-23 22:25,sell,QNT-USD,155.61,13.12684159,2032.45,trailing stop,-95.36,-4.48
 2026-11-24 05:07,buy,MON-USD,0.01311,153998.412,2029.01,pump +8.3%,,
+2026-11-24 09:55,sell,MON-USD,0.012456,153998.412,1908.61,trailing stop,-120.40,-5.93
