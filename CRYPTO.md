@@ -1,6 +1,6 @@
 # Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-24 15:39 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-24 18:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
+| Just hold Bitcoin | $8,973.31 | **-10.27%** |
 | Pump chaser, any coin | $8,971.50 | **-10.29%** |
-| Just hold Bitcoin | $8,919.60 | **-10.80%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,040.66 | **-19.59%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,175.08 | **-18.25%** |
 
 Closed trades: 28, winners: 9 (32%). Fees and spread paid: $517.92.
 
@@ -42,8 +42,8 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 | Player | Value | Return |
 | --- | --- | --- |
 | Pump chaser, alive coins only | $9,919.12 | **-0.81%** |
-| Just hold Bitcoin | $9,260.91 | **-7.39%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $8,837.19 | **-11.63%** |
+| Just hold Bitcoin | $9,316.68 | **-6.83%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $8,999.35 | **-10.01%** |
 
 Closed trades: 13, winners: 5 (38%). Fees and spread paid: $266.85.
 
@@ -75,8 +75,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 | Player | Value | Return |
 | --- | --- | --- |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
-| Just hold Bitcoin | $9,404.35 | **-5.96%** |
-| Just hold half Bitcoin, half Ethereum | $9,363.28 | **-6.37%** |
+| Just hold Bitcoin | $9,460.98 | **-5.39%** |
+| Just hold half Bitcoin, half Ethereum | $9,407.21 | **-5.93%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
 
