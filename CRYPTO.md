@@ -1,6 +1,6 @@
 # Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-24 05:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-24 06:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, any coin | $9,127.84 | **-8.72%** |
-| Just hold Bitcoin | $9,020.39 | **-9.80%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,459.85 | **-15.40%** |
+| Pump chaser, any coin | $9,178.81 | **-8.21%** |
+| Just hold Bitcoin | $9,015.45 | **-9.85%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,489.75 | **-15.10%** |
 
 Closed trades: 26, winners: 9 (35%). Fees and spread paid: $500.54.
 
@@ -18,8 +18,8 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| ALGO-USD | 2026-11-23 14:07 | 0.08584 | 0.08072 | -6.9% | 0.078552 | 2026-11-24 14:07 |
-| MON-USD | 2026-11-24 05:07 | 0.01311 | 0.01311 | -1.0% | 0.011799 | 2026-11-25 05:07 |
+| ALGO-USD | 2026-11-23 14:07 | 0.08584 | 0.08086 | -6.7% | 0.078552 | 2026-11-24 14:07 |
+| MON-USD | 2026-11-24 05:07 | 0.01311 | 0.013455 | +1.6% | 0.0121203 | 2026-11-25 05:07 |
 
 Last trades:
 
@@ -44,9 +44,9 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $10,134.97 | **+1.35%** |
-| Just hold Bitcoin | $9,365.56 | **-6.34%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,337.78 | **-6.62%** |
+| Pump chaser, alive coins only | $10,193.88 | **+1.94%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,363.92 | **-6.36%** |
+| Just hold Bitcoin | $9,360.43 | **-6.40%** |
 
 Closed trades: 11, winners: 5 (45%). Fees and spread paid: $248.51.
 
@@ -54,8 +54,8 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| FARTCOIN-USD | 2026-11-23 15:07 | 0.08754 | 0.0832 | -5.9% | 0.07884 | 2026-11-24 15:07 |
-| MON-USD | 2026-11-24 05:07 | 0.01311 | 0.01311 | -1.0% | 0.011799 | 2026-11-25 05:07 |
+| FARTCOIN-USD | 2026-11-23 15:07 | 0.08754 | 0.08346 | -5.6% | 0.07884 | 2026-11-24 15:07 |
+| MON-USD | 2026-11-24 05:07 | 0.01311 | 0.013455 | +1.6% | 0.0121203 | 2026-11-25 05:07 |
 
 Last trades:
 
@@ -81,8 +81,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 | Player | Value | Return |
 | --- | --- | --- |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
-| Just hold Bitcoin | $9,510.62 | **-4.89%** |
-| Just hold half Bitcoin, half Ethereum | $9,480.51 | **-5.19%** |
+| Just hold Bitcoin | $9,505.41 | **-4.95%** |
+| Just hold half Bitcoin, half Ethereum | $9,471.02 | **-5.29%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
 
