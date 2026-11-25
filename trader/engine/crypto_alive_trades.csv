@@ -26,3 +26,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-24 09:55,sell,MON-USD,0.012456,153998.412,1908.61,trailing stop,-120.40,-5.93
 2026-11-24 13:10,sell,FARTCOIN-USD,0.07884,22201.76607,1741.64,trailing stop,-211.63,-10.83
 2026-11-25 18:07,buy,MON-USD,0.011338,174100.685,1983.82,pump +13.0%,,
+2026-11-25 19:07,buy,DRV-USD,0.35014,5634.377563,1982.69,pump +11.0%,,
