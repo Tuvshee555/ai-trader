@@ -1,6 +1,6 @@
 # Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-25 19:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-25 19:50 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,24 +8,26 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $8,930.78 | **-10.69%** |
-| Pump chaser, any coin | $8,881.88 | **-11.18%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,240.73 | **-17.59%** |
+| Just hold Bitcoin | $8,935.76 | **-10.64%** |
+| Pump chaser, any coin | $8,926.44 | **-10.74%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,281.43 | **-17.19%** |
 
-Closed trades: 28, winners: 9 (32%). Fees and spread paid: $544.54.
+Closed trades: 28, winners: 9 (32%). Fees and spread paid: $553.43.
 
 Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| PROS-USD | 2026-11-25 08:07 | 0.7329 | 0.7055 | -4.7% | 0.67023 | 2026-11-26 08:07 |
-| MON-USD | 2026-11-25 18:07 | 0.011338 | 0.011362 | -0.8% | 0.0105057 | 2026-11-26 18:07 |
-| DRV-USD | 2026-11-25 19:07 | 0.35014 | 0.35014 | -1.0% | 0.315126 | 2026-11-26 19:07 |
+| PROS-USD | 2026-11-25 08:07 | 0.7329 | 0.7015 | -5.2% | 0.67023 | 2026-11-26 08:07 |
+| MON-USD | 2026-11-25 18:07 | 0.011338 | 0.011599 | +1.3% | 0.010656 | 2026-11-26 18:07 |
+| DRV-USD | 2026-11-25 19:07 | 0.35014 | 0.35533 | +0.5% | 0.321156 | 2026-11-26 19:07 |
+| VVV-USD | 2026-11-25 19:50 | 27.5012 | 27.5012 | -1.0% | 24.7511 | 2026-11-26 19:50 |
 
 Last trades:
 
 | Time (UTC) | Side | Coin | Price | $ | Why | P&L |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-25 19:50 | buy | VVV-USD | 27.5012 | 1787.07 | pump +12.0% |  |
 | 2026-11-25 19:07 | buy | DRV-USD | 0.35014 | 1778.14 | pump +11.0% |  |
 | 2026-11-25 18:07 | buy | MON-USD | 0.011338 | 1777.65 | pump +13.0% |  |
 | 2026-11-25 08:07 | buy | PROS-USD | 0.7329 | 1794.30 | pump +21.7% |  |
@@ -37,7 +39,6 @@ Last trades:
 | 2026-11-23 17:07 | sell | PUMP-USD | 0.002634 | 1897.98 | 24 hours up | $19.50 (1.04%) |
 | 2026-11-23 15:30 | sell | PEARL-USD | 2.25 | 1833.29 | trailing stop | $-90.60 (-4.71%) |
 | 2026-11-23 14:07 | buy | LIGHTER-USD | 2.57 | 1844.55 | pump +8.0% |  |
-| 2026-11-23 14:07 | buy | QNT-USD | 161.29 | 1918.32 | pump +12.3% |  |
 
 ## Pump chaser, alive coins only
 
@@ -45,23 +46,25 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $9,903.56 | **-0.96%** |
-| Just hold Bitcoin | $9,272.53 | **-7.27%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,066.93 | **-9.33%** |
+| Pump chaser, alive coins only | $9,964.14 | **-0.36%** |
+| Just hold Bitcoin | $9,277.69 | **-7.22%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,108.01 | **-8.92%** |
 
-Closed trades: 13, winners: 5 (38%). Fees and spread paid: $286.58.
+Closed trades: 13, winners: 5 (38%). Fees and spread paid: $296.51.
 
 Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| MON-USD | 2026-11-25 18:07 | 0.011338 | 0.011362 | -0.8% | 0.0105057 | 2026-11-26 18:07 |
-| DRV-USD | 2026-11-25 19:07 | 0.35014 | 0.35014 | -1.0% | 0.315126 | 2026-11-26 19:07 |
+| MON-USD | 2026-11-25 18:07 | 0.011338 | 0.011599 | +1.3% | 0.010656 | 2026-11-26 18:07 |
+| DRV-USD | 2026-11-25 19:07 | 0.35014 | 0.35533 | +0.5% | 0.321156 | 2026-11-26 19:07 |
+| VVV-USD | 2026-11-25 19:50 | 27.5012 | 27.5012 | -1.0% | 24.7511 | 2026-11-26 19:50 |
 
 Last trades:
 
 | Time (UTC) | Side | Coin | Price | $ | Why | P&L |
 | --- | --- | --- | --- | --- | --- | --- |
+| 2026-11-25 19:50 | buy | VVV-USD | 27.5012 | 1994.81 | pump +12.0% |  |
 | 2026-11-25 19:07 | buy | DRV-USD | 0.35014 | 1982.69 | pump +11.0% |  |
 | 2026-11-25 18:07 | buy | MON-USD | 0.011338 | 1983.82 | pump +13.0% |  |
 | 2026-11-24 13:10 | sell | FARTCOIN-USD | 0.07884 | 1741.64 | trailing stop | $-211.63 (-10.83%) |
@@ -73,7 +76,6 @@ Last trades:
 | 2026-11-23 15:30 | sell | PEARL-USD | 2.25 | 2120.52 | trailing stop | $35.14 (1.68%) |
 | 2026-11-23 15:07 | buy | FARTCOIN-USD | 0.08754 | 1953.26 | pump +12.5% |  |
 | 2026-11-23 14:07 | buy | LIGHTER-USD | 2.57 | 2125.70 | pump +8.0% |  |
-| 2026-11-23 14:07 | buy | QNT-USD | 161.29 | 2127.81 | pump +12.3% |  |
 
 ## Trend: Bitcoin + Ethereum
 
@@ -82,8 +84,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 | Player | Value | Return |
 | --- | --- | --- |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
-| Just hold Bitcoin | $9,416.14 | **-5.84%** |
-| Just hold half Bitcoin, half Ethereum | $9,383.56 | **-6.16%** |
+| Just hold Bitcoin | $9,421.39 | **-5.79%** |
+| Just hold half Bitcoin, half Ethereum | $9,380.85 | **-6.19%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
 
