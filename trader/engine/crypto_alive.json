@@ -5,9 +5,7 @@
  },
  "cash": 9919.11667460004,
  "positions": {},
- "cooldown": {
-  "FARTCOIN-USD": 1795612200.0
- },
+ "cooldown": {},
  "bench": {
   "btc": {
    "BTC-USD": 0.15497295024639923
