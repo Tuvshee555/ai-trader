@@ -33,3 +33,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-26 02:55,sell,VVV-USD,27.58482,72.1746199,1980.97,trailing stop,-13.84,-0.69
 2026-11-26 09:25,sell,MON-USD,0.010656,174100.685,1845.94,trailing stop,-137.88,-6.95
 2026-11-26 12:07,buy,FET-USD,0.11594,16744.60276,1951.08,pump +11.5%,,
+2026-11-26 19:07,sell,DRV-USD,0.39531,5634.377563,2216.19,24 hours up,233.50,11.78
