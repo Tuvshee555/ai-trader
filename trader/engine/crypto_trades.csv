@@ -64,3 +64,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-26 05:35,sell,PROS-USD,0.67023,2436.038098,1624.54,trailing stop,-169.76,-9.46
 2026-11-26 09:25,sell,MON-USD,0.010656,156007.2261,1654.10,trailing stop,-123.55,-6.95
 2026-11-26 11:07,buy,SEI-USD,0.03617,47536.5111,1727.99,pump +13.2%,,
+2026-11-26 12:07,buy,FET-USD,0.11594,14947.90266,1741.73,pump +11.5%,,
