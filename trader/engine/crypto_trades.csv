@@ -61,3 +61,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-25 19:50,buy,VVV-USD,27.5012,64.65809562,1787.07,pump +12.0%,,
 2026-11-26 01:07,buy,TRUMP-USD,0.9006,1996.175785,1806.74,pump +8.6%,,
 2026-11-26 02:55,sell,VVV-USD,27.58482,64.65809562,1774.66,trailing stop,-12.40,-0.69
+2026-11-26 05:35,sell,PROS-USD,0.67023,2436.038098,1624.54,trailing stop,-169.76,-9.46

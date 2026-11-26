@@ -3,14 +3,8 @@
   "t": 1794640856.2246451,
   "cash": 10000.0
  },
- "cash": 1802.2516413908627,
+ "cash": 3426.7939267256197,
  "positions": {
-  "PROS-USD": {
-   "qty": 2436.038097976502,
-   "entry": 0.7329,
-   "t": 1795594035.4198587,
-   "cost": 1794.299183617013
-  },
   "MON-USD": {
    "qty": 156007.226076124,
    "entry": 0.011338,
@@ -31,7 +25,8 @@
   }
  },
  "cooldown": {
-  "VVV-USD": 1795748100.0
+  "VVV-USD": 1795748100.0,
+  "PROS-USD": 1795757700.0
  },
  "bench": {
   "btc": {
@@ -46,8 +41,8 @@
   "memes_rule": "meme coins with >= $1M/day average in the 7 days before the start; rebuilt 2026-11-18 at start prices"
  },
  "stats": {
-  "trades": 29,
+  "trades": 30,
   "wins": 9,
-  "fees": 571.3377028472373
+  "fees": 579.5012319192713
  }
 }
