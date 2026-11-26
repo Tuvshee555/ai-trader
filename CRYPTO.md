@@ -1,6 +1,6 @@
 # Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-26 12:08 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-26 18:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,067.11 | **-9.33%** |
-| Pump chaser, any coin | $8,694.72 | **-13.05%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,464.75 | **-15.35%** |
+| Just hold Bitcoin | $9,023.80 | **-9.76%** |
+| Pump chaser, any coin | $8,912.46 | **-10.88%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,398.93 | **-16.01%** |
 
 Closed trades: 31, winners: 9 (29%). Fees and spread paid: $605.08.
 
@@ -18,10 +18,10 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| DRV-USD | 2026-11-25 19:07 | 0.35014 | 0.35963 | +1.7% | 0.3339 | 2026-11-26 19:07 |
-| TRUMP-USD | 2026-11-26 01:07 | 0.9006 | 0.8796 | -3.3% | 0.81828 | 2026-11-27 01:07 |
-| SEI-USD | 2026-11-26 11:07 | 0.03617 | 0.03739 | +2.3% | 0.033813 | 2026-11-27 11:07 |
-| FET-USD | 2026-11-26 12:07 | 0.11594 | 0.11594 | -1.0% | 0.104346 | 2026-11-27 12:07 |
+| DRV-USD | 2026-11-25 19:07 | 0.35014 | 0.38079 | +7.7% | 0.342243 | 2026-11-26 19:07 |
+| TRUMP-USD | 2026-11-26 01:07 | 0.9006 | 0.8696 | -4.4% | 0.81828 | 2026-11-27 01:07 |
+| SEI-USD | 2026-11-26 11:07 | 0.03617 | 0.03983 | +9.0% | 0.035883 | 2026-11-27 11:07 |
+| FET-USD | 2026-11-26 12:07 | 0.11594 | 0.11693 | -0.1% | 0.105408 | 2026-11-27 12:07 |
 
 Last trades:
 
@@ -46,9 +46,9 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $9,741.93 | **-2.58%** |
-| Just hold Bitcoin | $9,414.07 | **-5.86%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,327.96 | **-6.72%** |
+| Pump chaser, alive coins only | $9,846.63 | **-1.53%** |
+| Just hold Bitcoin | $9,369.10 | **-6.31%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,252.90 | **-7.47%** |
 
 Closed trades: 15, winners: 5 (33%). Fees and spread paid: $345.14.
 
@@ -56,10 +56,10 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| DRV-USD | 2026-11-25 19:07 | 0.35014 | 0.35963 | +1.7% | 0.3339 | 2026-11-26 19:07 |
-| TRUMP-USD | 2026-11-26 01:07 | 0.9006 | 0.8796 | -3.3% | 0.81828 | 2026-11-27 01:07 |
-| NEAR-USD | 2026-11-26 01:07 | 3.0744 | 3.0859 | -0.6% | 2.80197 | 2026-11-27 01:07 |
-| FET-USD | 2026-11-26 12:07 | 0.11594 | 0.11594 | -1.0% | 0.104346 | 2026-11-27 12:07 |
+| DRV-USD | 2026-11-25 19:07 | 0.35014 | 0.38079 | +7.7% | 0.342243 | 2026-11-26 19:07 |
+| TRUMP-USD | 2026-11-26 01:07 | 0.9006 | 0.8696 | -4.4% | 0.81828 | 2026-11-27 01:07 |
+| NEAR-USD | 2026-11-26 01:07 | 3.0744 | 3.0719 | -1.1% | 2.80197 | 2026-11-27 01:07 |
+| FET-USD | 2026-11-26 12:07 | 0.11594 | 0.11693 | -0.1% | 0.105408 | 2026-11-27 12:07 |
 
 Last trades:
 
@@ -85,8 +85,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 | Player | Value | Return |
 | --- | --- | --- |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
-| Just hold Bitcoin | $9,559.88 | **-4.40%** |
-| Just hold half Bitcoin, half Ethereum | $9,511.70 | **-4.88%** |
+| Just hold Bitcoin | $9,514.22 | **-4.86%** |
+| Just hold half Bitcoin, half Ethereum | $9,455.49 | **-5.45%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
 
