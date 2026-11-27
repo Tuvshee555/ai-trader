@@ -1,6 +1,6 @@
 # Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-27 07:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-27 10:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $9,201.63 | **-7.98%** |
-| Pump chaser, any coin | $8,855.58 | **-11.44%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,563.90 | **-14.36%** |
+| Just hold Bitcoin | $9,189.26 | **-8.11%** |
+| Pump chaser, any coin | $8,967.22 | **-10.33%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,586.48 | **-14.14%** |
 
 Closed trades: 33, winners: 10 (30%). Fees and spread paid: $650.19.
 
@@ -18,11 +18,11 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| SEI-USD | 2026-11-26 11:07 | 0.03617 | 0.03859 | +5.6% | 0.037161 | 2026-11-27 11:07 |
-| FET-USD | 2026-11-26 12:07 | 0.11594 | 0.12491 | +6.7% | 0.115632 | 2026-11-27 12:07 |
-| WIF-USD | 2026-11-26 19:07 | 0.14142 | 0.1375 | -3.7% | 0.127278 | 2026-11-27 19:07 |
-| SKY-USD | 2026-11-27 03:07 | 0.04891 | 0.04642 | -6.0% | 0.045243 | 2026-11-28 03:07 |
-| PONS-USD | 2026-11-27 07:07 | 0.1047 | 0.1047 | -1.0% | 0.09423 | 2026-11-28 07:07 |
+| SEI-USD | 2026-11-26 11:07 | 0.03617 | 0.03888 | +6.4% | 0.037161 | 2026-11-27 11:07 |
+| FET-USD | 2026-11-26 12:07 | 0.11594 | 0.12808 | +9.4% | 0.116289 | 2026-11-27 12:07 |
+| WIF-USD | 2026-11-26 19:07 | 0.14142 | 0.13816 | -3.3% | 0.127278 | 2026-11-27 19:07 |
+| SKY-USD | 2026-11-27 03:07 | 0.04891 | 0.04623 | -6.4% | 0.045243 | 2026-11-28 03:07 |
+| PONS-USD | 2026-11-27 07:07 | 0.1047 | 0.1077 | +1.8% | 0.09846 | 2026-11-28 07:07 |
 
 Last trades:
 
@@ -47,9 +47,9 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $9,921.57 | **-0.78%** |
-| Just hold Bitcoin | $9,553.74 | **-4.46%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,452.46 | **-5.48%** |
+| Pump chaser, alive coins only | $9,966.91 | **-0.33%** |
+| Just hold Bitcoin | $9,540.89 | **-4.59%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $9,469.27 | **-5.31%** |
 
 Closed trades: 18, winners: 6 (33%). Fees and spread paid: $385.57.
 
@@ -57,8 +57,8 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| FET-USD | 2026-11-26 12:07 | 0.11594 | 0.12491 | +6.7% | 0.115632 | 2026-11-27 12:07 |
-| SKY-USD | 2026-11-27 03:07 | 0.04891 | 0.04642 | -6.0% | 0.045243 | 2026-11-28 03:07 |
+| FET-USD | 2026-11-26 12:07 | 0.11594 | 0.12808 | +9.4% | 0.116289 | 2026-11-27 12:07 |
+| SKY-USD | 2026-11-27 03:07 | 0.04891 | 0.04623 | -6.4% | 0.045243 | 2026-11-28 03:07 |
 
 Last trades:
 
@@ -84,8 +84,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 | Player | Value | Return |
 | --- | --- | --- |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
-| Just hold Bitcoin | $9,701.71 | **-2.98%** |
-| Just hold half Bitcoin, half Ethereum | $9,660.88 | **-3.39%** |
+| Just hold Bitcoin | $9,688.66 | **-3.11%** |
+| Just hold half Bitcoin, half Ethereum | $9,636.92 | **-3.63%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
 
