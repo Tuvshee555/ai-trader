@@ -3,14 +3,8 @@
   "t": 1794640856.2246451,
   "cash": 10000.0
  },
- "cash": 0.0,
+ "cash": 1842.2893719484518,
  "positions": {
-  "SEI-USD": {
-   "qty": 47536.51110361698,
-   "entry": 0.03617,
-   "t": 1795691234.5951443,
-   "cost": 1727.992584650915
-  },
   "FET-USD": {
    "qty": 14947.902658427884,
    "entry": 0.11594,
@@ -38,7 +32,8 @@
  },
  "cooldown": {
   "DRV-USD": 1795806434.389942,
-  "TRUMP-USD": 1795828035.2229216
+  "TRUMP-USD": 1795828035.2229216,
+  "SEI-USD": 1795864035.1199796
  },
  "bench": {
   "btc": {
@@ -53,8 +48,8 @@
   "memes_rule": "meme coins with >= $1M/day average in the 7 days before the start; rebuilt 2026-11-18 at start prices"
  },
  "stats": {
-  "trades": 33,
-  "wins": 10,
-  "fees": 650.1921840535568
+  "trades": 34,
+  "wins": 11,
+  "fees": 659.4499195909863
  }
 }
