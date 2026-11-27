@@ -74,3 +74,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-27 12:07,sell,FET-USD,0.12892,14947.90266,1917.45,24 hours up,175.72,10.09
 2026-11-27 14:55,sell,SKY-USD,0.045243,36403.51614,1638.77,trailing stop,-150.63,-8.42
 2026-11-27 15:00,sell,PONS-USD,0.10026,16320.20897,1628.08,trailing stop,-89.19,-5.19
+2026-11-27 19:07,sell,WIF-USD,0.14067,12766.71904,1786.91,24 hours up,-27.58,-1.52
