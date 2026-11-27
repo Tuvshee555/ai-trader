@@ -3,14 +3,8 @@
   "t": 1794640856.2246451,
   "cash": 10000.0
  },
- "cash": 1784.2397403436821,
+ "cash": 3506.667962499613,
  "positions": {
-  "TRUMP-USD": {
-   "qty": 1996.1757845453408,
-   "entry": 0.9006,
-   "t": 1795655234.3354058,
-   "cost": 1806.7446911193413
-  },
   "SEI-USD": {
    "qty": 47536.51110361698,
    "entry": 0.03617,
@@ -34,7 +28,8 @@
   "VVV-USD": 1795748100.0,
   "PROS-USD": 1795757700.0,
   "MON-USD": 1795771500.0,
-  "DRV-USD": 1795806434.389942
+  "DRV-USD": 1795806434.389942,
+  "TRUMP-USD": 1795828035.2229216
  },
  "bench": {
   "btc": {
@@ -49,8 +44,8 @@
   "memes_rule": "meme coins with >= $1M/day average in the 7 days before the start; rebuilt 2026-11-18 at start prices"
  },
  "stats": {
-  "trades": 32,
+  "trades": 33,
   "wins": 10,
-  "fees": 624.0906565856014
+  "fees": 632.7460747873901
  }
 }
