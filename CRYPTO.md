@@ -1,6 +1,6 @@
 # Crypto traders
 
-Paper money, $10,000 per trader. Updated 2026-11-28 12:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
+Paper money, $10,000 per trader. Updated 2026-11-28 13:07 UTC. Prices: Coinbase, live. Each trader is compared with just holding coins over its own dates.
 
 ## Pump chaser, any coin
 
@@ -8,9 +8,9 @@ Started 2026-11-14 07:20 UTC with $10,000. Buys any coin that pumps, even one th
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Just hold Bitcoin | $8,847.99 | **-11.52%** |
-| Pump chaser, any coin | $8,740.00 | **-12.60%** |
-| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $8,018.97 | **-19.81%** |
+| Just hold Bitcoin | $8,827.31 | **-11.73%** |
+| Pump chaser, any coin | $8,711.82 | **-12.88%** |
+| Just hold 4 alive meme coins (DOGE, PEPE, TRUMP, FARTCOIN) | $7,986.77 | **-20.13%** |
 
 Closed trades: 39, winners: 12 (31%). Fees and spread paid: $720.72.
 
@@ -18,7 +18,7 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| LIGHTER-USD | 2026-11-28 00:07 | 2.676 | 2.627 | -2.8% | 2.4291 | 2026-11-29 00:07 |
+| LIGHTER-USD | 2026-11-28 00:07 | 2.676 | 2.584 | -4.4% | 2.4291 | 2026-11-29 00:07 |
 
 Last trades:
 
@@ -43,9 +43,9 @@ Started 2026-11-18 10:07 UTC with $10,000. Buys a pump only if the coin traded a
 
 | Player | Value | Return |
 | --- | --- | --- |
-| Pump chaser, alive coins only | $9,874.78 | **-1.25%** |
-| Just hold Bitcoin | $9,186.56 | **-8.13%** |
-| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $8,887.23 | **-11.13%** |
+| Pump chaser, alive coins only | $9,843.05 | **-1.57%** |
+| Just hold Bitcoin | $9,165.09 | **-8.35%** |
+| Just hold 5 alive meme coins (DOGE, PEPE, TRUMP, PENGU, FARTCOIN) | $8,847.11 | **-11.53%** |
 
 Closed trades: 20, winners: 7 (35%). Fees and spread paid: $415.44.
 
@@ -53,7 +53,7 @@ Holding now:
 
 | Coin | Bought (UTC) | Entry | Now | P&L | Sells below | Sells by |
 | --- | --- | --- | --- | --- | --- | --- |
-| LIGHTER-USD | 2026-11-28 00:07 | 2.676 | 2.627 | -2.8% | 2.4291 | 2026-11-29 00:07 |
+| LIGHTER-USD | 2026-11-28 00:07 | 2.676 | 2.584 | -4.4% | 2.4291 | 2026-11-29 00:07 |
 
 Last trades:
 
@@ -79,8 +79,8 @@ Started 2026-11-19 07:44 UTC with $10,000. Holds Bitcoin and Ethereum, at most h
 | Player | Value | Return |
 | --- | --- | --- |
 | Trend: Bitcoin + Ethereum | $10,000.00 | **+0.00%** |
-| Just hold Bitcoin | $9,328.85 | **-6.71%** |
-| Just hold half Bitcoin, half Ethereum | $9,249.21 | **-7.51%** |
+| Just hold Bitcoin | $9,307.04 | **-6.93%** |
+| Just hold half Bitcoin, half Ethereum | $9,223.20 | **-7.77%** |
 
 Closed trades: 0, winners: 0 (n/a). Fees and spread paid: $0.00.
 
