@@ -78,3 +78,4 @@ time_utc,side,coin,price,qty,usd,reason,pnl_usd,pnl_pct
 2026-11-28 00:07,buy,LIGHTER-USD,2.676,655.4302144,1762.70,pump +8.1%,,
 2026-11-28 02:07,buy,CFG-USD,0.066,26579.89379,1763.04,pump +28.4%,,
 2026-11-28 05:40,sell,CFG-USD,0.06543,26579.89379,1730.43,trailing stop,-32.62,-1.85
+2026-11-28 15:07,buy,O-USD,1.2177,1421.710471,1739.87,pump +79.9%,,
