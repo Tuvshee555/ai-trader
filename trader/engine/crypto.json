@@ -3,24 +3,19 @@
   "t": 1794640856.2246451,
   "cash": 10000.0
  },
- "cash": 5278.31319851382,
+ "cash": 6846.989314205077,
  "positions": {
   "LIGHTER-USD": {
    "qty": 655.4302143786185,
    "entry": 2.676,
    "t": 1795824434.460046,
    "cost": 1762.700909945569
-  },
-  "O-USD": {
-   "qty": 1421.7104708850788,
-   "entry": 1.2177,
-   "t": 1795878441.3888044,
-   "cost": 1739.8729245987442
   }
  },
  "cooldown": {
   "WIF-USD": 1795892838.6185682,
-  "CFG-USD": 1795930800.0
+  "CFG-USD": 1795930800.0,
+  "O-USD": 1795968900.0
  },
  "bench": {
   "btc": {
@@ -35,8 +30,8 @@
   "memes_rule": "meme coins with >= $1M/day average in the 7 days before the start; rebuilt 2026-11-18 at start prices"
  },
  "stats": {
-  "trades": 39,
+  "trades": 40,
   "wins": 12,
-  "fees": 729.3738693174423
+  "fees": 737.2566638686546
  }
 }
